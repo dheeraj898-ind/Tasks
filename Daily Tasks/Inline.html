@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <title>Document</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f5f6fa;
+            margin: 0;
+            padding: 20px;
+        }
+        h1{
+            color:blue;
+            margin-bottom: 20px;
+            font-size: 70px;
+        }
+        section{
+            background-color: white;
+            padding: 20px;
+            margin-bottom: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px black;
+        }
+        span{
+            color: orange;
+        }
+        p{
+            line-height: 1.6;
+        }
+        a{
+            color: blue;
+            text-decoration: none;
+        }
+        a:hover{
+            text-decoration: underline;
+        }
+        img{
+            width: 100%;
+            max-width: 700px;
+            border-radius: 6px;
+            margin-top: 10px;
+        }
+        input, select, textarea{
+            width: 50%;
+            padding: 8px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: 2px solid black;
+        }
+        button{
+            background-color: blue;
+            color: white;
+            padding: 10px 16px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+        
+
+    </style>
+</head>
+<body>
+    <h1>Inline Semantic Lab</h1>
+    <hr>
+    <section>
+        <h2>Text & Typography</h2>
+        <p> Welcome to the <b>bold</b> and <i>italic</i> world of HTML.We use <strong>Strong</strong> for importance and <em>Emphasis</em> for stress. Sometimes we need to <u>underline</u> or 
+        <s>strike through</s> text. You can also find <small>small print</small>,<mark>highlighted notes</mark>, and even subscript or superscript formulas like H<sub>2</sub>O or E=mc<sup>2</sup>.</p>
+        
+        <p> Check out this<abbr title="HyperText Markup Language"> HTML</abbr> definition: <cite>Semantic HTML</cite> is the use of markup to reinforce meaning. As <cite>Tim Berners-Lee</cite> once implied, the web is for everyone. The browser says: <q>Hello World</q>. 
+        <span>This is a generic span for custom styling.</span></p>
+    </section>
+
+    <section>
+        <h2>Technical Documentation</h2>
+        <p> To save your work, press <kbd>Ctrl</kbd> + <kbd>S</kbd>. To save your work, press <kbd>Ctrl</kbd> + <kbd>S</kbd>.The variable <code>x</code> is defined in our <code>main.js</code> file. The terminal will output: Success: 200 OK</p>
+        <p>Bidirectional override (RTL): <bdo dir="rtl">This text will go right to left.</bdo></p>
+    </section>
+
+    <section>
+        <h2>Media & Links</h2>
+        <p>Visit our <a href="#">Documentation Portal</a>.</p>
+        <img src="https://static.vecteezy.com/system/resources/thumbnails/072/289/300/small/alpine-valley-forest-with-mist-and-tall-pine-trees-photo.jpg" alt="Mountain landscape">
+        <p>Current Time: <time datetime="2026-04-22">April 22, 2026</time></p>
+    </section>
+
+    <section>
+        <h2>Interactive Elements</h2>
+        <label>Entry A (Input):</label><br>
+        <input type="number" value="10"><br><br>
+        <label>Entry B (Range):</label><br>
+        <input type="range" min="0" max="100" value="81"><br><br>
+        <label>Sum (Output):</label><br>
+        <output>91</output><br><br>
+        <label>Select Option:</label><br>
+        <select>
+            <option>Standard</option>
+            <option>Advanced</option>
+            <option>Premium</option>
+        </select><br><br>
+        <label>Message (Textarea):</label><br>
+        <textarea placeholder="Type here..."></textarea><br><br>
+        <label>Upload Progress:</label><br>
+        <progress value="70" max="100"></progress><br><br>
+        <label>Storage Capacity (Meter):</label><br>
+        <meter value="0.6"></meter><br><br>
+        <button>Submit Button</button>
+    </section>
+
+    
+</body>
+</html>
