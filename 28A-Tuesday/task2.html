@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .header{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 40px;
+            background: linear-gradient(to right, grey,lightgrey);
+        }
+        .photo img{
+            width: 200px;
+            height: 100px;
+        }
+        nav a{
+            text-decoration: none;
+            margin-left: 50px;
+            color: black;
+            transition: 0.3s;
+        }
+        nav a:hover{
+            background-color: grey;
+            color: orange;
+            padding: 10px;
+            border-radius: 10px;
+            transform: scale(1.1);
+        }
+        .container{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 50px;
+        }
+        .card2 img{
+            width: 100%;
+            height: auto;
+            border-radius: 20px;
+        }
+        .range{
+            margin-bottom: 20px;
+        }
+        .range input{
+            width: 140%;
+        }
+        .card1 p{
+            color: orange;
+            font-size: 50px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="photo">
+            <img src="https://connect.theoppty.com/media/message_files/2026/04/28/new-logo-bridge-header-1.png" alt="image1">
+        </div>
+        <nav>
+            <a href="#">HOME</a>
+            <a href="#">PAGES</a>
+            <a href="#">OUR SERVICES</a>
+            <a href="#">CONTACT US</a>
+        </nav>
+    </div>
+    <hr>
+
+    <div class="container">
+        <div class="card1">
+            <p>Creative App Ideas</p>
+            <div class="range">
+                <label>Information Architecture</label><br>
+                <input type="range" min="0" max="100" value="70">
+            </div>
+            <div class="range">
+                <label>App Development</label><br>
+                <input type="range" min="0" max="100" value="97">
+            </div>
+            <div class="range">
+                <label>User Interface</label><br>
+                <input type="range" min="0" max="100" value="92">
+            </div>
+            <div class="range">
+                <label>Total Memory Usage</label><br>
+                <input type="range" min="0" max="100" value="65">
+            </div>
+        </div>
+
+        <div class="card2">
+            <img src="https://www.bridgebase.com/assets/images/img-win-acbl.jpg" alt="image2">
+        </div>
+    </div>
+
+</body>
+</html>
