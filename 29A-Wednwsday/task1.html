@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0px;
+            font-family: Arial, sans-serif;
+            background-color: whitesmoke;
+        }
+        .container{
+            width: 60%;
+            margin: 30px;
+        }
+        h1{
+            width: 50%;
+            background-color: brown;
+            color: white;
+            
+        }
+        .card{
+            background:white;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 10px;
+            text-align: left;
+        }
+        img{
+            width: 200px;
+            height: 200px;
+            border-radius: 10px;
+            margin: 20px;
+        }
+        .block img{
+            display: block;
+        }
+        .flex{
+            display: flex;
+            justify-content: space-around;
+        }
+        .grid{
+            display: grid;
+            grid-template-columns:1fr 1fr 1fr;
+        }
+    </style>
+</head>
+<body>
+    <center>
+    <div class="container">
+        <h1>Image Display Arrangement</h1>
+        <div class="card">
+            <h3>Images as Block </h3>
+            <p>Each image takes its own line and stacks vertically.</p>
+            <div class="block">
+                <img src="https://tse4.mm.bing.net/th/id/OIP.-M-ekNcMx0hRip547D7eeAHaEo?pid=Api&P=0&h=180" alt="image1"> 
+                <img src="https://images.pexels.com/photos/56832/road-asphalt-space-sky-56832.jpeg?cs=srgb&dl=asphalt-clouds-fields-56832.jpg&fm=jpg"  alt="image2">
+            </div>
+        </div>
+         <div class="card">
+            <h3>Images in Flexbox</h3>
+            <p>Images sit in a row and are spaced evenly.</p>
+            <div class="flex">
+                <img src="https://tse4.mm.bing.net/th/id/OIP.XIS9DxFrCahzu6Z3AskYlwHaEo?pid=Api&P=0&h=180" alt="image3">
+                <img src="https://wallpapercave.com/wp/wp5762539.jpg" alt="image4">
+                <img src="https://wallpaperaccess.com/full/1079100.jpg" alt="image5">
+            </div>
+        </div>
+         <div class="card">
+            <h3>Images in Grid</h3>
+            <p>Organized into a 3-column structure.</p>
+            <div class="grid">
+                <img src="https://static.vecteezy.com/system/resources/previews/029/592/352/large_2x/landscape-with-country-road-empty-asphalt-road-on-sunset-background-multicolor-vibrant-outdoors-horizontal-image-generative-ai-illustration-free-photo.jpg" alt="image6">
+                <img src="https://cdn.pixabay.com/photo/2018/02/27/18/17/road-3186188_1280.jpg" alt="image7">
+                <img src="https://wallup.net/wp-content/uploads/2015/12/147452-landscape-nature-mountain-clouds-road.jpg" alt="image8">
+                <img src="https://static.vecteezy.com/system/resources/thumbnails/020/334/864/small_2x/countryside-road-and-yellow-line-with-trees-on-both-sides-curve-of-the-road-photo.jpg" alt="9">
+                <img src="https://images.creativemarket.com/0.1.0/ps/5196620/910/933/m2/fpnw/wm1/amzhsn1zjk2av18ze5irgu830fayrisqkznd1qde1ovmuvbl90mprvum5ac5k0mk-.jpg?1539478668&s=836724fac992d0b5c5c0214ed1bf7d24" alt="image10">
+                <img src="https://tse2.mm.bing.net/th/id/OIP.wnQy2oggSlMo6xdTGNBLtwHaE6?pid=Api&P=0&h=180" alt="image12">
+            </div>
+        </div>
+
+    </div>
+    </center>
+</body>
+</html>
