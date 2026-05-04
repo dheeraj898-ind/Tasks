@@ -1,0 +1,411 @@
+ *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+    body{
+        font-family:Arial, sans-serif;
+    }
+    .choco{
+        height:100vh;
+        background:url('https://bridge248.qodeinteractive.com/wp-content/uploads/2018/06/banner-2.jpg');
+        background-position: center;
+        background-size: cover;
+        position:relative;
+    }
+    header{
+        position:absolute;
+        top:0;
+        left:0;
+        width:100%;
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        padding:20px 50px;
+        z-index:10;
+    }
+    .logo img{
+        filter: brightness(0)invert(1);
+    }
+    nav a{
+        letter-spacing: 5px;
+        color:white;
+        margin: 30px;
+        text-decoration:none;
+        font-size:20px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+    nav a:hover{
+        text-decoration: underline;
+        color: #f4cfdf;
+    }
+    .icons a{
+        background-color:#f4cfdf;
+        color:black;
+        padding: 8px;
+        margin-top: 10px; 
+        margin-right: 5px; 
+        border-radius: 50px;
+        text-decoration: none;
+        font-weight: 400px;
+        font-size: 20px;   
+        transition: 0.3s;
+    }
+    .icons a:hover{
+        background-color: white;
+    }
+    .chocoimage{
+        position:absolute;
+        top:50%;
+        left:50%;
+        transform:translate(-50%,-50%);
+        z-index:2;
+    }
+    .chocoimage img{
+        animation:Glow 2s ease forwards;
+    }
+    @keyframes Glow{
+        from{
+            opacity:0;
+        }
+        to{ 
+            opacity:1;
+        }
+    }
+    .leef1{
+        position:absolute;
+        top:-100px; 
+        left:0%;
+        width:220px;
+        animation:Down 2s ease-in-out forwards;
+    }
+    @keyframes Down{
+        from{
+            transform:translateY(0) 
+        }
+        to{
+            transform:translateY(50vh)
+        }
+    }
+    .leef2{
+        position:absolute;
+        top:-100px; 
+        left:80%;
+        width:160px;
+        animation:Down 2s ease-in forwards;
+    }
+    @keyframes Down{
+        from{
+            transform:translateY(0) 
+        }
+        to{
+            transform:translateY(50vh)
+        }
+    }
+    .badam1{
+        position:absolute;
+        top:-100px; 
+        left:80%;
+        width:80px;
+        animation: Bada 2s ease-in-out forwards;
+    }
+    @keyframes Bada{
+        from{
+            transform:translateY(0) 
+        }
+        to{
+            transform:translateY(10vh)
+        }
+    }
+    .badam2{
+        position:absolute;
+        top:-100px; 
+        left:85%;
+        width:130px;
+        animation:Bad 2s ease-in forwards;
+    }
+    @keyframes Bad{
+        from{
+            transform:translateY(0) 
+        }
+        to{
+            transform:translateY(30vh)
+        }
+    }
+      /* ---------------------------------            header ends   */
+
+
+    .second{
+        display:flex;
+        align-items:center;
+        justify-content:space-between;
+        text-align: center;
+        padding: 100px;
+    }
+    .secondimage img{
+        width:700px;
+        height: 500px;
+    }
+    .secondtext{
+        width:500px;
+    }
+    .secondtext span{
+        font-size:60px;
+        margin-bottom:20px;
+        font-family: Playfair Display,sans-serif;
+    }
+    .secondtext p{
+        margin-top: 30px;
+        color: #565656;
+        font-size: 20px;
+        margin-bottom:20px;
+        font-family: Playfair Display,sans-serif;
+    }
+    .secondtext button{
+        font-family: Playfair Display,sans-serif;
+        padding:20px 40px;
+        border:1px solid black;
+        background:whitesmoke;
+        color:black;
+        cursor:pointer;
+    }
+    /* ----------------------------------------------- second ends */
+
+
+    .third{
+        display:flex;
+        gap: 20px;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .card{
+        position:relative;
+      
+    }
+    .card img{
+        width:100%;
+        cursor: pointer;
+    }
+    .cardtext{
+        font-family: Playfair Display,sans-serif;
+        font-style: italic;
+        font-size: 60px;
+        position:absolute;
+        top:50%;
+        left:50%;
+        transform:translate(-50%,-50%);
+        color:white;
+        text-align:center;
+        transition: 0.3s;
+        opacity:0;
+    }
+    .card:hover .cardtext{
+        opacity:1;
+    }
+
+    /* ------------------------------------------------ third ends */
+
+    .products{
+        display:flex;
+        justify-content:space-around;
+        margin: 80px;
+        text-align:center;
+    }
+    .product img{
+        width:350px;
+        height: 250px;
+        margin-bottom:20px;
+    }
+    .product h3{
+        margin-bottom: 30px;
+        font-family: Playfair Display,sans-serif;
+        font-style: italic;
+        font-size: 26px;
+    }
+    .product p{
+        font-family: Playfair Display,sans-serif;
+        font-size: 18px;
+        color: #565656;
+        max-width: 260px;   
+        margin: 0 auto;    
+        line-height: 1.6;  
+    }
+
+    /* ------------------------------------------------ product ends */
+
+    .video{
+        width:100%;
+        height:100vh;
+        background:url('https://bridge248.qodeinteractive.com/wp-content/uploads/2018/06/video-background.jpg'); 
+        background-position: center;
+        background-size: cover;
+        position:relative;
+    }
+    .video iframe{
+        position:absolute;
+        top:50%;
+        left:50%;
+        transform:translate(-50%,-50%);
+        width:640px;
+        height:360px;
+    }
+
+    /* -------------------------------------Vedio ends */
+    
+    
+    
+    .reviews{
+        height: 600px;
+        background:url('https://bridge248.qodeinteractive.com/wp-content/uploads/2018/06/testimonials-background.png?id=74');
+        background-size:cover;
+        background-position:center;
+        padding:100px 20px;
+        text-align:center;
+    }
+    .reviews span{
+        color: #303030;
+        font-size: 60px;
+        margin-top: 10px;
+        font-family: Playfair Display,sans-serif;
+        margin-bottom:20px;
+    }
+    .reviews p{
+        color: #565656;
+        font-size: 18px;
+        font-family: Playfair Display,sans-serif;
+        max-width:600px;
+        margin:40px auto;
+    }
+    .least{
+        color:#290000;
+        font-family: Playfair Display,sans-serif;
+        font-weight: bold;
+        font-size: 25px;
+        font-style: italic;
+    }
+    /* -------------------------------------------------reviews end */
+
+
+    .map{
+        position: relative;
+    }
+    .maps iframe{
+        width:100%;
+        height:400px;
+    }
+    .form{
+        position:absolute;
+        width: 80%;
+        height: 400px;
+        top:250px; 
+        left:50%;
+        transform:translateX(-50%);
+        background:white;
+        padding:40px;
+        display:flex;
+        justify-content:space-between;
+        gap:40px;
+        box-shadow:0 5px 20px rgba(0,0,0,0.2);
+    }
+    .rightside{
+        width:60%;
+        text-align: center;   
+    }
+    .rightside span{
+        margin-bottom:20px ;
+        font-family: Playfair Display,sans-serif;
+        color: #282828;
+        font-size: 40px;
+        margin-bottom: 20px;
+    }
+    .rightside p{
+        margin-top: 20px;
+        font-family: Playfair Display,sans-serif;
+        font-size: 18px;
+        color: #565656;
+        margin-bottom: 10px;
+    }
+    .form input, .form textarea{
+        width:100%;
+        margin-bottom:35px;
+        padding:10px;
+        border:none;
+        border-bottom:1px solid black;
+        outline:none;
+    }
+    .form button{
+        padding:10px 20px;
+        border:1px solid black;
+        background:white;
+        cursor:pointer;
+    }
+
+    /* --------------------------------------------- form ends */
+    
+    
+    .gal{
+        width:70%;
+        margin-top: 300px;
+    }
+    .gall img{
+        margin-left: 300px;
+        width: 100%;
+        height: 400px;
+    }
+    /* ---------------------------------- gal image ends */
+    
+    
+    .gallery{
+        margin: 0px 200px;
+        padding:50px 20px;
+        background:whitesmoke;
+    }
+    .siximages{
+        display:grid;
+        grid-template-columns: 1fr 1fr 1fr; 
+        gap:20px;
+    }
+    .siximages img{
+        width:100%;
+        height:100%;
+        object-fit:cover;
+        opacity: 1;
+    }
+    .siximages img:hover{
+        opacity: 0.8;
+        
+    }
+
+    /* -------------------------------------------------- grid ends */
+
+
+
+    .end{
+        margin-top: 100px;
+        position:relative;
+        background:url('https://bridge248.qodeinteractive.com/wp-content/uploads/2018/06/footer-img.jpg');
+        background-size:cover;
+        background-position:center;
+        height:300px;
+    }
+    .endtext{
+        position:absolute;
+        top:50%;
+        left:50%;
+        transform:translate(-50%,-50%);
+        text-align:center;
+        color:white;
+    }
+    .endtext img{
+        margin-bottom: 20px;
+        filter: brightness(0)invert(1);
+    }
+    .endtext p{
+        font-family: Playfair Display,sans-serif;
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+    .icons{
+        margin: 20px;
+    }
