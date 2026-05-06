@@ -1,0 +1,632 @@
+    *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+.header{
+    display:flex;
+    width: 80%;
+    justify-content:space-between;
+    align-items:center;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: white;
+    padding:20px 60px;
+    text-align: center;
+    margin-left: 180px;
+    margin-top: 60px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}.header img{
+    height:40px;
+}
+
+.nav a{
+    text-decoration:none;
+    color:black;
+    font: size 20px;
+    font-family: ui-sans-serif,system-ui,sans-serif;
+    padding: 16px 0px;
+    margin-right: 40px;
+}
+.header button{
+    padding:10px 20px;
+    border-radius:25px;
+    border:none;
+    margin-left:10px;
+    cursor:pointer;
+}
+
+.header button:first-child{
+    background:#2563eb;
+    color:white;
+}
+
+.header button:last-child{
+    background:white;
+    border:1px solid black;
+}
+/* ------------------------------------------ header ends */
+
+
+.pics{
+    position:relative;
+    text-align:center;
+    padding:120px 20px;
+}
+.content{
+    margin-top: 300px;
+}
+
+.content p{
+    max-width: 600px;
+    margin-left: 450px;
+    font-size:60px;
+    line-height:1.2;
+    font-family: Geist,sans-serif;
+}
+
+.content button{
+    margin-top:30px;
+    margin-bottom: 200px;
+    padding:15px 30px;
+    background:#2563eb;
+    color:white;
+    border:none;
+    border-radius:30px;
+    cursor:pointer;
+}
+
+.pics img{
+    position:absolute;
+    width:200px;
+    border-radius:15px;
+}
+.L1{
+    top:30px;
+    left:220px; 
+}
+.L2{ 
+    height: 200px;
+    top:160px;
+    left:650px;
+ }
+.L3{ 
+    top:80px;
+    right:350px;
+ }
+.L4{ 
+    top:280px;
+    left: 1300px;
+ }
+.L5{ 
+    top:300px;
+    left:-50px;
+ }
+.L6{ 
+    top:600px;
+    left:250px;
+ }
+.L7{ 
+    bottom:60px;
+    left:680px; 
+}
+.L8{ 
+    top:550px;
+    left: 1300px; 
+}
+
+.pics img{
+    animation: Jump 3s ease infinite;
+}
+@keyframes Jump{
+  0%{
+    transform: translateY(0);
+    }
+  50%{
+    transform: translateY(-25px);
+    }
+  100%{
+    transform: translateY(0);
+    }
+}
+
+/* -------------------------------------------------- images end. */
+
+
+.trust{
+    background-color: #f9f9fb;
+    text-align: center;
+    padding:100px 20px;
+    border-radius: 10px;
+}
+
+.trust h2{
+    text-align: left;
+    margin-left: 100px;
+    max-width: 700px;
+    font-size:40px;
+    margin-bottom:50px;
+}
+
+
+.row{
+    display:flex;
+    justify-content:flex-start;
+    gap:150px;
+    margin-bottom:40px;
+}
+
+.row h1{
+    
+    font-size:80px;
+}
+
+.row p{
+    margin-top:10px;
+    color:#555;
+}
+.row1{
+    text-align: left;
+    border-left: 1px solid black;
+    padding-left: 20px;
+    margin-left: 100px;
+}
+.row2{
+    text-align: left;
+    border-left: 1px solid black;
+    padding-left: 20px;
+    margin-left: 400px;
+}
+
+
+.trustbutton button{
+    margin-top: 100px;
+    padding:15px 30px;
+    background:#2563eb;
+    color:white;
+    border:none;
+    border-radius:30px;
+    cursor:pointer;
+}
+
+/* -------------------------------------------------------------- second ends here */
+
+.vedio{
+    text-align: center;
+
+}
+.vediotext p{
+    font-size: 26px;
+    font-weight: bold;
+    margin-top: 150px;
+}
+.vediotext h1{
+    margin-top: 40px;
+    margin-bottom: 70px;
+    max-width: 850px;
+    font-size: 48px;
+    margin-left: 400px;
+}
+.vedios iframe{
+    width: 80%;
+    height: 80vh;
+    border-radius: 20px;
+    margin-bottom: 100px;
+}
+/* ---------------------------------------------------vedio ends here. */
+
+
+.fourth{
+    background-color: #f9f9fb;
+    padding:80px;
+    text-align:center;
+}
+
+.fourthtext1{
+  font-size:20px;
+  color:#666;
+  margin-bottom: 30px;
+}
+
+.fourth h1{
+  font-size:60px;
+  max-width: 700px;
+  margin-bottom: 30px;
+  margin-left: 330px;
+}
+
+.fourthtext2{
+  max-width:700px;
+  margin-left: 330px;
+  margin-bottom:30px;
+  color:#555;
+  font-size: 20px;
+}
+.fourthbox{
+  border:1px solid #ddd;
+  border-radius:12px;
+  overflow:hidden;
+  background-color: #ffffff;
+}
+.line{
+  display:flex;
+}
+
+.line span{
+  flex:1;
+  padding:30px;
+  text-align:center;
+  border-right:1px solid #ddd;
+  border-bottom:1px solid black;
+  cursor:pointer;
+}
+.line .one{
+  background:white;
+  border-bottom:2px solid black;
+  font-weight:bold;
+}
+
+.box{
+  display:flex;
+  align-items:center;
+  gap:50px;
+  padding:40px;
+  text-align:left;
+}
+
+.box img{
+  width:45%;
+  border-radius:20px;
+}
+
+.text{
+  flex:1;
+}
+
+.text h2{
+  margin:25px 0;
+}
+
+.text p{
+  color:#555;
+  margin:25px 0;
+}
+
+.boxbutton{
+  background:#1d4eff;
+  color:white;
+  border:none;
+  padding:10px 20px;
+  border-radius:20px;
+  margin-right:10px;
+  cursor:pointer;
+}
+.text a{
+    text-decoration: none;
+    color: black;
+}
+
+/* -----------------------------------------------------------fourth ends here */
+
+.fifth{
+    height: 100vh;
+    background-color: #c5f1ec;
+}
+.first {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.left{
+    margin-left: 100px;
+}
+.left p{
+    margin-top: 100px;
+}
+
+.left h2 {
+  font-size: 48px;
+  max-width: 700px;
+}
+.right{
+    text-align: left;
+}
+.right p{
+    margin-bottom: 40px;
+}
+.right a{
+    text-decoration: none;
+    color:black;
+}
+                            /* ------------------Fifth 2 start */
+
+.second {
+   
+    display: flex;
+    justify-content: space-around;
+    margin-top: 60px;
+}
+
+.second1 { 
+     margin-top: 80px;
+    width: 30%;
+    border-left: 1px solid rgba(0,0,0,0.2);
+    padding-left: 20px;
+}
+.second2 { 
+    margin-top: 80px;
+    width: 30%;
+    border-left: 1px solid rgba(0,0,0,0.2);
+    padding-left: 20px;
+}
+.second3 {
+    margin-top: 80px;
+    width: 30%;
+    border-left: 1px solid rgba(0,0,0,0.2);
+    padding-left: 20px;
+}
+.second h1{
+    font-size: 58px;
+}
+.second p{
+    font-size: 20px;
+}
+
+/* -----------------------------------fifth section end */
+
+.sixth{
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 40px;
+}
+.pic{
+    flex: 1;
+}
+.pic img{
+    margin: 50px;
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    max-width: 600px;
+}
+.text{
+    margin-left: 100px;
+    text-align: left;
+}
+.text h3{
+    margin-bottom: 30px;
+}
+.text h1{
+    margin-bottom: 30px;
+    font-size: 40px;
+}
+.text p{
+    max-width: 500px;
+}
+.text button{
+    background-color: blue;
+    color: white;
+    padding: 10px 15px;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+/* -------------------------------------------------sixth ends here */
+
+
+.questions{
+  display:flex;
+  justify-content:space-between;
+  padding:100px 80px;
+  gap:60px;
+  background:#f7f7fb;
+}
+.answer1{
+  width:40%;
+}
+.answer1 h1{
+  font-size:48px;
+  margin-bottom:20px;
+}
+.answer1 p{
+  color:#555;
+  margin-bottom:20px;
+}
+.answer1 button{
+  padding:10px 20px;
+  border-radius:25px;
+  border:1px solid #ccc;
+  background:white;
+}
+
+.answer2{
+  width:50%;
+}
+.think{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  background:#fff;
+  padding:16px 20px;
+  margin-bottom:12px;
+  border-radius:12px;
+  border:1px solid #eee;
+  font-size:16px;
+}
+.think span{
+  font-size:20px;
+  font-weight:bold;
+}
+.seemore{
+  display:block;
+  margin:25px auto;
+  padding:10px 20px;
+  border-radius:20px;
+  border:1px solid #ccc;
+  background:none;
+}
+.start{
+  text-align:center;
+  color:#666;
+  margin:20px 0 10px;
+}
+.free{
+  display:block;
+  margin:0 auto;
+  padding:12px 25px;
+  border-radius:25px;
+  background:#2563eb;
+  color:white;
+  border:none;
+}
+
+/* ------------------------------------------------------question ends*/
+
+.container {
+  display: flex;
+  gap: 20px;
+  padding: 40px;
+}
+.card {
+  background: #f5f5f5;
+  border-radius: 15px;
+  overflow: hidden;
+  width: 50%;
+  height: 500px;
+  padding-bottom: 20px;
+}
+.card img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  transition: 0.3s;
+}
+.card img:hover{
+    transform: scale(1.1);
+}
+.card h2 {
+  padding: 15px;
+  font-size: 20px;
+}
+
+.card p {
+  padding: 0 15px;
+  color: #555;
+}
+
+.card span {
+  display: block;
+  padding: 15px;
+  font-weight: bold;
+}
+
+.card .light {
+    color: gray;
+}
+
+/* --------------------------------------------------card ends.... */
+
+.footer{
+    background:#f5d5ff;
+    padding:50px;
+}
+
+.first{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.first h2{
+    font-size:58px;
+    margin-bottom: 30px;
+}
+
+.first p{
+    font-size:18px;
+    color:#444;
+    margin-bottom: 30px;
+}
+
+.first button{
+    padding:10px 20px;
+    margin-left: 30px;
+    background:#2563eb;
+    color:white;
+    border:none;
+    border-radius:20px;
+    margin-right:10px;
+}
+.first a{
+    text-decoration: none;
+    color: black;
+}
+
+/* ----------------------------------------footer top end here*/
+
+.all{
+    display:flex;
+    justify-content:space-between;
+    margin:40px 0;
+}
+
+.all div{
+    display:flex;
+    flex-direction:column;
+}
+
+.all h4{
+    font-size: 20px;
+    margin-bottom:10px;
+}
+
+.all a{
+    font-size: 16px;
+    text-decoration:none;
+    color:#333;
+    margin:4px 0;
+}
+
+.bottom{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-end;
+  padding:30px 0;
+}
+.controls{
+  display:flex;
+  gap:10px;
+  margin-bottom:15px;
+}
+.lang{
+  padding:8px 15px;
+  border-radius:20px;
+  border:1px solid #ccc;
+  background:white;
+  font-size:14px;
+  cursor:pointer;
+}
+.controls button{
+  padding:8px 15px;
+  border-radius:20px;
+  border:1px solid #ccc;
+  background:white;
+  cursor:pointer;
+}
+.badges img{
+  width:45px;
+  margin-right:10px;
+  margin-top:10px;
+}
+.copy{
+  font-size:14px;
+  color:#333;
+}
+.right a{
+  margin-right: 20px;
+  font-size:18px;
+}
