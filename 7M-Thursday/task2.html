@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <style>
+.branch{
+    padding:80px;
+    background:#f5f5f5;
+    text-align:center;
+}
+.branchtext{
+    width:60%;
+    margin:10px auto 0;
+    color:gray;
+    line-height:1.6;
+}
+.course-box{
+    width:80%;
+    margin:50px auto;
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr;  /* 3 cards per row */
+    gap:35px;
+}
+.card{
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    text-align:left;
+    transition:0.5s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    border:2px solid #00c6b8;
+    box-shadow:0 10px 20px rgba(0,0,0,0.1);
+}
+.icon1{
+    width:50px;
+    height:50px;
+    border-radius:10px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin-bottom:15px;
+    font-size:20px;
+    background:#dbeafe;
+    color:#2563eb;
+}
+.icon2{
+    width:50px;
+    height:50px;
+    border-radius:10px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin-bottom:15px;
+    font-size:20px;
+    background:#fee2e2; 
+    color:#dc2626;
+}
+.icon3{
+    width:50px;
+    height:50px;
+    border-radius:10px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin-bottom:15px;
+    font-size:20px;
+    background:#f3e8ff; 
+    color:#9333ea;
+}
+.icon4{
+    width:50px;
+    height:50px;
+    border-radius:10px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin-bottom:15px;
+    font-size:20px;
+    background:#dcfce7; 
+    color:#16a34a;
+}
+.icon5{
+    width:50px;
+    height:50px;
+    border-radius:10px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin-bottom:15px;
+    font-size:20px;
+    background:#fef3c7;
+    color:#ca8a04;
+}
+.dark{
+    background:#064e3b;
+    color:white;
+}
+.darkbutton{
+    border: 1px solid white;
+    padding: 8px 14px;
+    margin-bottom: 10px;
+    border-radius: 25px;
+}
+.darkbutton:hover{
+    border:2px solid orange;
+    transform: scale(1.1);
+}
+
+.card h2{
+    margin-bottom:15px;
+    color:#1e293b;
+}
+
+.card p{
+    color:gray;
+    font-size:16px;
+    margin-bottom:20px;
+}
+
+.dark h2,.dark p{
+    color:white;
+}
+
+.card a{
+    text-decoration:none;
+    font-size: 20px;
+    font-weight:bold;
+    color:#111;
+}
+.dark a{
+    color:white;
+}
+    </style>
+</head>
+<body>
+    <div class="branch">
+        <h5>ACADEMICS</h5>
+        <h1>Discover Your Passion</h1>
+        <p class="branchtext">Choose from over 150 undergraduate and graduate programs designed to equip you with the skills needed to thrive in a rapidly evolving world.</p>
+
+    <div class="course-box">
+
+        <div class="card">
+            <div class="icon1"><i class="fa-solid fa-laptop-code"></i></div>
+            <h2>Computer Science & AI</h2>
+            <p>Pioneer the future of technology with AI, machine learning, and software engineering.</p>
+            <a href="#">Explore Faculty</a>
+        </div>
+
+        <div class="card">
+            <div class="icon2"><i class="fa-solid fa-heart-pulse"></i></div>
+            <h2>Medical Sciences</h2>
+            <p>State-of-the-art facilities prepare the next generation of healthcare leaders.</p>
+            <a href="#">Explore Faculty</a>
+        </div>
+
+        <div class="card">
+            <div class="icon3"><i class="fa-solid fa-palette"></i></div>
+            <h2>Arts & Design</h2>
+            <p>Develop your creativity with modern digital tools and traditional techniques.</p>
+            <a href="#">Explore Faculty</a>
+        </div>
+
+        <div class="card">
+            <div class="icon4"><i class="fa-solid fa-chart-pie"></i></div>
+            <h2>Business Administration</h2>
+            <p>Build leadership skills through real-world case studies and internships.</p>
+            <a href="#">Explore Faculty</a>
+        </div>
+
+        <div class="card">
+            <div class="icon5"><i class="fa-solid fa-scale-balanced"></i></div>
+            <h2>Law & Public Policy</h2>
+            <p>Learn critical thinking, ethics, and practical advocacy for society.</p>
+            <a href="#">Explore Faculty</a>
+        </div>
+
+        <div class="card dark">
+            <div class="icon6"><i class="fa-solid fa-magnifying-glass"></i></div>
+            <h2>View All Programs</h2>
+            <p>Browse our complete catalog of undergraduate and graduate programs.</p>
+            <a class="darkbutton" href="#">Full Catalog</a>
+        </div>
+
+    </div>
+</div>
+</body>
+</html>
