@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <title>CAREER</title>
+    <style>
+*{
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+.topbar{
+    width:100%;
+    background:black;
+    padding:12px 120px;
+}
+
+.topbar-container{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:20px;
+}
+
+.topbar-item{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    color:#ffffff;
+    font-size:14px;
+    font-weight:400;
+}
+
+.topbar-item i{
+    color:#FF7A00;
+    font-size:15px;
+}
+
+/* ------------------------------------------------------------topbar ends here. */
+
+
+/* ------------------------------------------------------------Nav start here. */
+
+
+.navbar{
+    width:100%;
+    background:#0B1F3A;
+    padding:18px 120px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:20px;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.logo img{
+    width:55px;
+    height:55px;
+    object-fit:cover;
+    border-radius:50%;
+}
+
+.logo h2{
+    color:#ffffff;
+    font-size:30px;
+    font-weight:700;
+    letter-spacing:1px;
+}
+
+.logo h2 span{
+    color:#FF7A00;
+}
+
+nav{
+    display:flex;
+    align-items:center;
+    gap:35px;
+}
+
+nav a{
+    color:#ffffff;
+    font-size:20px;
+    font-weight:500;
+    transition:0.4s;
+    text-decoration: none;
+}
+
+nav a:hover{
+    text-decoration: underline;
+    color:#FF7A00;
+}
+
+.btn{
+    background:#FF7A00;
+    color:#ffffff;
+    padding:13px 28px;
+    border-radius:5px;
+    font-size:20px;
+    transition:0.4s;
+    text-decoration: none;
+}
+
+.btn:hover{
+    background:#ffffff;
+    color:#0B1F3A;
+}
+
+/* ------------------------------------------------------------Nav ends here. */
+
+
+/* ------------------------------------------------------------Hero ends here. */
+
+.hero{
+    width:100%;
+    height:100vh;
+    padding:0 120px;
+    background:url("https://d2aconstruction.com/wp-content/uploads/2024/06/Transforming-Dreams-into-Digital-Reality-with-3D-Design.jpeg");
+    background-position: center;
+    background-size: cover;
+    position:relative;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.overlay{
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.65);
+    position:absolute;
+    top:0;
+    left:0;
+}
+
+.hero-content{
+    position:absolute;
+    max-width:800px;
+    text-align:center;
+    animation:heroContent 1.2s ease forwards;
+}
+@keyframes heroContent{
+
+    from{
+        opacity:0;
+        transform:translateY(200px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(-50PX);
+    }
+
+}
+
+.hero-content h4{
+    color:#FF7A00;
+    font-size:18px;
+    letter-spacing:2px;
+    margin-bottom:20px;
+}
+
+.hero-content h1{
+    color:#ffffff;
+    font-size:75px;
+    line-height:1.2;
+    margin-bottom:40px;
+}
+.hero-content p{
+    color: wheat;
+    line-height: 1.3;
+    letter-spacing: 2px;
+    margin-bottom: 40px;
+}
+.hero-btns{
+    display:flex;
+    gap:20px;
+    justify-content:center;
+}
+
+.btn, .contact-btn{
+    padding:15px 32px;
+    border-radius:5px;
+    font-size:20px;
+    transition:0.4s;
+    text-decoration: none;
+}
+
+.btn{
+    background:#FF7A00;
+    color:#ffffff;
+}
+
+.btn:hover{
+    transform:translateY(-5px);
+    background:#ffffff;
+    color:#0B1F3A;
+}
+
+.contact-btn{
+    border:2px solid #ffffff;
+    color:#ffffff;
+}
+
+.contact-btn:hover{
+    background:#FF7A00;
+    border-color:#FF7A00;
+    transform:translateY(-5px);
+}
+
+ /* ------------------------------------------------------------hero ends here. */ 
+
+
+/* ===== JOB OPENINGS START ===== */
+
+.jobs{
+    padding:100px 8%;
+    text-align:center;
+}
+
+.jobs h2{
+    color:#0B1F3A;
+    margin-bottom:40px;
+}
+
+.jobs-box{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:25px;
+}
+
+.job-card{
+    background:#0B1F3A;
+    color:#fff;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.1);
+    transition:0.4s;
+}
+
+.job-card:hover{
+    transform:translateY(-8px);
+    background:#FF7A00;
+    color:#111;
+}
+
+.job-card h3{
+    color:#FF7A00;
+    margin-bottom:10px;
+}
+.job-card h3:hover{
+    color:#0B1F3A;
+}
+
+/* -----------------------jop openings end-------------- */
+
+
+
+/* -------------------------------application form start------------------- */
+
+.apply{
+    padding:100px 120px;
+    text-align:center;
+}
+
+.apply h2{
+    margin-bottom:40px;
+    color:#0B1F3A;
+}
+
+.apply-form{
+    width:420px;
+    margin:auto;
+    padding:40px;
+    border-radius:15px;
+    background:linear-gradient(135deg,#0B1F3A,#1B3B6F);
+    box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+
+.apply-form input{
+    width:100%;
+    padding:12px;
+    margin-bottom:15px;
+    border:none;
+    border-radius:5px;
+    outline:none;
+}
+
+.btn-row{
+    display:flex;
+    gap:10px;
+}
+
+.btn-row button{
+    flex:1;
+    padding:12px;
+    border:none;
+    cursor:pointer;
+    border-radius:5px;
+    background:#FF7A00;
+    color:#fff;
+    transition:0.3s;
+}
+
+.btn-row button:hover{
+    background:#fff;
+    color:#0B1F3A;
+}
+
+/* -------------------------------------------------apply form end ----------------- */
+
+/* -------------------------------------------Footer start----------------------- */
+
+.footer{
+    background:url("https://img.freepik.com/premium-photo/construction-site-night-with-floodlights-illuminating-area_1057859-654.jpg");
+    position:relative;
+    color:#fff;
+    background-size:150%;
+    background-repeat:no-repeat;
+    animation:footerMove 8s linear infinite alternate;
+}
+@keyframes footerMove{
+
+   from{
+   background-position:left;
+}
+
+to{
+   background-position:right;
+}
+}
+.overlayy{
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.65);
+    position:absolute;
+    top:0;
+    left:0;
+}
+
+.footer-content{
+    position: relative;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:40px;
+    padding:80px 120px;
+}
+
+.footer h2,
+.footer h3{
+    color:#FF7A00;
+    margin-bottom:20px;
+}
+
+.footer p,
+.footer a{
+    color:#ddd;
+    display:block;
+    margin-bottom:10px;
+    text-decoration:none;
+}
+
+.footer a:hover{
+    color:#FF7A00;
+}
+.footer1 p{
+    max-width: 200px;
+}
+
+.footer4 img{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+    border-radius:10px;
+    transition:0.5s ease;
+}
+
+.footer4 img:hover{
+    transform:scale(1.1);
+}
+
+.bottom{
+    text-align:center;
+    padding:20px;
+    border-top:1px solid rgba(255,255,255,0.2);
+    background:rgba(11,31,58,0.85);
+}
+
+
+/* ------------------------------------------------footer ends here---------------- */
+</style>
+</head>
+<body>
+    <div class="topbar">
+        <div class="topbar-container">
+            <div class="topbar-item">
+                <i class="fa-solid fa-phone"></i><span>+91-88888 88888</span>
+            </div>
+            <div class="topbar-item">
+                <i class="fa-solid fa-envelope"></i><span>construction@info.com</span>
+            </div>
+            <div class="topbar-item">
+                <i class="fa-solid fa-clock"></i>
+                <span>Mon - Sat : 9:00 AM - 7:00 PM</span>
+            </div>
+        </div>
+    </div>
+
+<!-- ------------------------------------------------------------topbar ends here. -->
+
+
+<!-- -----------------------------------------------------Nav bar start -->
+
+<header class="navbar">
+    <div class="logo">
+        <img src="http://www.maziply.com/cdn/shop/collections/Mega_Construx-logo.jpg?v=1697039878" alt="logo">
+        <h2>CONS<span>TRUX</span></h2>
+    </div>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="team.html">Team</a>
+        <a href="career.html">Careers</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    <a href="#" class="btn">Enquire Us</a>
+</header>
+
+<!--------------------------------------------------------------Nav ends here.  -->
+
+
+<!-- /* ------------------------------------------------------------Hero starts here. */ -->
+
+<section class="hero">
+    <div class="overlay"></div>
+    <div class="hero-content">
+        <h4>Build Your Career With Us</h4>
+        <h1><i>CAREERS</i></h1>
+        <p>Join our growing team and become part of a company that values innovation, teamwork, and professional excellence.</p>
+        <div class="hero-btns">
+            <a href="#" class="btn">Explore Services</a>
+            <a href="#" class="contact-btn">Contact Us</a>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- ---------------------------------job openings start -------------- -->
+
+<section class="jobs">
+
+    <h2>Job Openings</h2>
+
+    <div class="jobs-box">
+
+        <div class="job-card">
+            <h3>Site Engineer</h3>
+            <p>Location: Vijayawada</p>
+            <p>Experience: 2+ Years</p>
+        </div>
+
+        <div class="job-card">
+            <h3>Civil Supervisor</h3>
+            <p>Location: Hyderabad</p>
+            <p>Experience: 3+ Years</p>
+        </div>
+
+        <div class="job-card">
+            <h3>Project Manager</h3>
+            <p>Location: Bangalore</p>
+            <p>Experience: 5+ Years</p>
+        </div>
+
+        <div class="job-card">
+            <h3>Safety Officer</h3>
+            <p>Location: Chennai</p>
+            <p>Experience: 2+ Years</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ===== JOB OPENINGS END ===== -->
+
+
+<!-- ===== APPLICATION FORM START ===== -->
+
+<section class="apply">
+
+    <h2>Apply Now</h2>
+
+    <form class="apply-form">
+
+        <input type="text" placeholder="Full Name">
+
+        <input type="email" placeholder="Email Address">
+
+        <input type="tel" placeholder="Mobile Number">
+
+        <input type="text" placeholder="Role Interested">
+
+        <input type="file">
+
+        <div class="btn-row">
+
+            <button type="submit" onclick="alert('Submitted Successfully!')">
+                Submit
+            </button>
+
+            <button type="reset" onclick="alert('Form Reset Successfully!')">
+                Reset
+            </button>
+
+        </div>
+
+    </form>
+
+</section>
+
+<!-- ===== APPLICATION FORM END ===== -->
+
+<!-- -----------------------------------------footer start ---------------- -->
+
+<footer class="footer">
+    <div class="overlayy"></div>
+    <div class="footer-content">
+        <div class="footer1">
+            <h2>Construx</h2>
+            <p>We deliver modern industrial construction solutions withinnovation, safety, and quality standards.</p>
+        </div>
+
+        <div class="footer2">
+            <h3>Quick Links</h3>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Team</a>
+            <a href="#">Careers</a>
+            <a href="#">Contact</a>
+        </div>
+
+
+        <div class="footer3">
+            <h3>Contact</h3>
+            <p>+91 88888 88888</p>
+            <p>construx@info.com</p>
+            <p>Banglore, India</p>
+
+        </div>
+
+
+        <div class="footer4">
+            <h3>Our Location</h3>
+            <img src="https://bridge510.qodeinteractive.com/wp-content/uploads/2018/12/footer-img-01.png" alt="map">
+        </div>
+    </div>
+
+
+    <div class="bottom">
+        © 2026 Construx. All Rights Reserved.
+    </div>
+
+</footer>
+
+<!-- ---------------------------------END ----------------------- -->
+</body>
+</html>

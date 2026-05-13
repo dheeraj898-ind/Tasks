@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <title>SERVICES</title>
+    <style>
+*{
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+.topbar{
+    width:100%;
+    background:black;
+    padding:12px 120px;
+}
+
+.topbar-container{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:20px;
+}
+
+.topbar-item{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    color:#ffffff;
+    font-size:14px;
+    font-weight:400;
+}
+
+.topbar-item i{
+    color:#FF7A00;
+    font-size:15px;
+}
+
+/* ------------------------------------------------------------topbar ends here. */
+
+
+/* ------------------------------------------------------------Nav start here. */
+
+
+.navbar{
+    width:100%;
+    background:#0B1F3A;
+    padding:18px 120px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:20px;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.logo img{
+    width:55px;
+    height:55px;
+    object-fit:cover;
+    border-radius:50%;
+}
+
+.logo h2{
+    color:#ffffff;
+    font-size:30px;
+    font-weight:700;
+    letter-spacing:1px;
+}
+
+.logo h2 span{
+    color:#FF7A00;
+}
+
+nav{
+    display:flex;
+    align-items:center;
+    gap:35px;
+}
+
+nav a{
+    color:#ffffff;
+    font-size:20px;
+    font-weight:500;
+    transition:0.4s;
+    text-decoration: none;
+}
+
+nav a:hover{
+    text-decoration: underline;
+    color:#FF7A00;
+}
+
+.btn{
+    background:#FF7A00;
+    color:#ffffff;
+    padding:13px 28px;
+    border-radius:5px;
+    font-size:20px;
+    transition:0.4s;
+    text-decoration: none;
+}
+
+.btn:hover{
+    background:#ffffff;
+    color:#0B1F3A;
+}
+
+/* ------------------------------------------------------------Nav ends here. */
+
+
+/* ------------------------------------------------------------Hero ends here. */
+
+.hero{
+    width:100%;
+    height:100vh;
+    padding:0 120px;
+    background:url("https://i.pinimg.com/originals/3a/39/d0/3a39d042d3ba4e0a8a2bef58354812f1.jpg");
+    background-position: center;
+    background-size: cover;
+    position:relative;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.overlay{
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.65);
+    position:absolute;
+    top:0;
+    left:0;
+}
+
+.hero-content{
+    position:absolute;
+    max-width:800px;
+    text-align:center;
+    animation:heroContent 1.2s ease forwards;
+}
+@keyframes heroContent{
+
+    from{
+        opacity:0;
+        transform:translateY(200px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(-50px);
+    }
+
+}
+
+.hero-content h4{
+    color:#FF7A00;
+    font-size:18px;
+    letter-spacing:2px;
+    margin-bottom:20px;
+    text-transform: uppercase;
+}
+
+.hero-content h1{
+    color:#ffffff;
+    font-size:75px;
+    line-height:1.2;
+    margin-bottom:40px;
+}
+.hero-content p{
+    color: wheat;
+    line-height: 1.3;
+    letter-spacing: 2px;
+    margin-bottom: 40px;
+}
+.hero-btns{
+    display:flex;
+    gap:20px;
+    justify-content:center;
+}
+
+.btn, .contact-btn{
+    padding:15px 32px;
+    border-radius:5px;
+    font-size:20px;
+    transition:0.4s;
+    text-decoration: none;
+}
+
+.btn{
+    background:#FF7A00;
+    color:#ffffff;
+}
+
+.btn:hover{
+    transform:translateY(-5px);
+    background:#ffffff;
+    color:#0B1F3A;
+}
+
+.contact-btn{
+    border:2px solid #ffffff;
+    color:#ffffff;
+}
+
+.contact-btn:hover{
+    background:#FF7A00;
+    border-color:#FF7A00;
+    transform:translateY(-5px);
+}
+
+ /* ------------------------------------------------------------hero ends here. */ 
+
+
+
+
+/* ---------------------------------services start-------------------- */
+
+.services{
+    padding:100px 8%;
+    text-align:center;
+}
+
+.services h2{
+    color:#0B1F3A;
+    margin-bottom:15px;
+}
+
+.services p{
+    color:#555;
+    margin-bottom:50px;
+}
+
+.services-box{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.service-card{
+    background:#0B1F3A;
+    color:#fff;
+    padding:35px 25px;
+    border-radius:15px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.1);
+    transition:0.4s ease;
+    cursor:pointer;
+}
+
+.service-card h3{
+    color:#FF7A00;
+    margin-bottom:15px;
+}
+
+.service-card:hover{
+    background:#FF7A00;
+    transform:translateY(-10px);
+    box-shadow:0 5px 2px 2px black;
+    color:#111;
+}
+
+.service-card:hover h3{
+    color:#0B1F3A;
+}
+
+/* --------------------------------pricing start here-------------------------- */
+
+.pricing{
+    padding:100px 120px;
+    text-align:center;
+    background:#f5f5f5;
+}
+
+.pricing h2{
+    color:#0B1F3A;
+    margin-bottom:50px;
+}
+
+.price-box{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    gap:60px;
+}
+
+.price-card{
+    width: 100%;
+    background:#0B1F3A;
+    color:#fff;
+    padding:40px 30px;
+    border-radius:15px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.1);
+}
+
+.price-card h3{
+    color:#FF7A00;
+    margin-bottom:20px;
+}
+
+.price-card h1{
+    font-size:50px;
+    margin-bottom:25px;
+}
+
+.price-card p{
+    margin-bottom:15px;
+}
+
+.price-card a{
+    display:inline-block;
+    margin-top:20px;
+    padding:12px 25px;
+    background:#FF7A00;
+    color:#fff;
+    border-radius:5px;
+    text-decoration:none;
+    transition:0.3s ease;
+}
+
+.price-card a:hover{
+    background:#fff;
+    color:#0B1F3A;
+}
+
+.different{
+    transform:scale(1.1);
+}
+
+/* -------------------------------------------pice ends here---------------- */
+
+
+/* ----------------------------process start----------------- */
+
+.process{
+    padding:100px 120px;
+    text-align:center;
+    background:#f8f8f8;
+}
+
+.process h2{
+    color:#0B1F3A;
+    margin-bottom:50px;
+}
+
+.process-box{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap:25px;
+}
+
+.process-card{
+    background:#fff;
+    padding:35px 25px;
+    border-radius:15px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+    transition:0.4s;
+}
+
+.process-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 5px 2px 2px black;
+    background:#0B1F3A;
+    color:#fff;
+}
+
+.process-card span{
+    display:inline-block;
+    width:50px;
+    height:50px;
+    line-height:50px;
+    background:#FF7A00;
+    color:#fff;
+    border-radius:50%;
+    font-weight:bold;
+    margin-bottom:20px;
+    transition:0.4s;
+}
+
+.process-card:hover span{
+    background:#fff;
+    color:#0B1F3A;
+}
+
+.process-card h3{
+    margin-bottom:15px;
+    color:#FF7A00;
+}
+
+.process-card:hover h3{
+    color:#FF7A00;
+}
+
+/* ----------------------------------process ends here---------------- */
+
+
+
+/* -------------------------------------------Footer start----------------------- */
+
+.footer{
+    background:url("https://img.freepik.com/premium-photo/construction-site-night-with-floodlights-illuminating-area_1057859-654.jpg");
+    position:relative;
+    color:#fff;
+    background-size:150%;
+    background-repeat:no-repeat;
+    animation:footerMove 8s linear infinite alternate;
+}
+@keyframes footerMove{
+
+   from{
+   background-position:left;
+}
+
+to{
+   background-position:right;
+}
+}
+
+.overlayy{
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.65);
+    position:absolute;
+    top:0;
+    left:0;
+}
+.footer-content{
+    position: relative;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:40px;
+    padding:80px 120px;
+}
+
+.footer h2,
+.footer h3{
+    color:#FF7A00;
+    margin-bottom:20px;
+}
+
+.footer p,
+.footer a{
+    color:#ddd;
+    display:block;
+    margin-bottom:10px;
+    text-decoration:none;
+}
+
+.footer a:hover{
+    color:#FF7A00;
+}
+.footer1 p{
+    max-width: 200px;
+}
+
+.footer4 img{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+    border-radius:10px;
+    transition:0.5s ease;
+}
+
+.footer4 img:hover{
+    transform:scale(1.1);
+}
+
+.bottom{
+    text-align:center;
+    padding:20px;
+    border-top:1px solid rgba(255,255,255,0.2);
+    background:rgba(11,31,58,0.85);
+}
+
+
+/* ------------------------------------------------footer ends here---------------- */
+</style>
+</head>
+<body>
+    <div class="topbar">
+        <div class="topbar-container">
+            <div class="topbar-item">
+                <i class="fa-solid fa-phone"></i><span>+91-88888 88888</span>
+            </div>
+            <div class="topbar-item">
+                <i class="fa-solid fa-envelope"></i><span>construction@info.com</span>
+            </div>
+            <div class="topbar-item">
+                <i class="fa-solid fa-clock"></i>
+                <span>Mon - Sat : 9:00 AM - 7:00 PM</span>
+            </div>
+        </div>
+    </div>
+
+<!-- ------------------------------------------------------------topbar ends here. -->
+
+
+<!-- -----------------------------------------------------Nav bar start -->
+
+<header class="navbar">
+    <div class="logo">
+        <img src="http://www.maziply.com/cdn/shop/collections/Mega_Construx-logo.jpg?v=1697039878" alt="logo">
+        <h2>CONS<span>TRUX</span></h2>
+    </div>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="team.html">Team</a>
+        <a href="career.html">Careers</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    <a href="#" class="btn">Enquire Us</a>
+</header>
+
+<!--------------------------------------------------------------Nav ends here.  -->
+
+
+<!-- /* ------------------------------------------------------------Hero starts here. */ -->
+
+<section class="hero">
+    <div class="overlay"></div>
+    <div class="hero-content">
+        <h4>Smart Solutions For Every Industry</h4>
+        <h1><i>Our Services</i></h1>
+        <p>From industrial planning to large-scale construction, we provide efficient services tailored to your business needs.</p>
+        <div class="hero-btns">
+            <a href="#" class="btn">Explore Services</a>
+            <a href="#" class="contact-btn">Contact Us</a>
+        </div>
+    </div>
+</section>
+
+<!-- /* ------------------------------------------------------------hero ends here. */ -->
+
+
+<!-- ===== SERVICES CARDS START ===== -->
+
+<section class="services">
+
+    <h2>Our Services</h2>
+
+    <p>
+        We provide complete industrial construction solutions with quality, safety and innovation.
+    </p>
+
+    <div class="services-box">
+
+        <div class="service-card">
+            <h3>Industrial Construction</h3>
+            <p>Complete end-to-end industrial building solutions.</p>
+        </div>
+
+        <div class="service-card">
+            <h3>Factory Setup</h3>
+            <p>Design and setup of modern manufacturing units.</p>
+        </div>
+
+        <div class="service-card">
+            <h3>Warehouse Building</h3>
+            <p>Strong and scalable warehouse infrastructure.</p>
+        </div>
+
+        <div class="service-card">
+            <h3>Infrastructure Development</h3>
+            <p>Roads, layouts and industrial infrastructure works.</p>
+        </div>
+
+        <div class="service-card">
+            <h3>Steel Structures</h3>
+            <p>Durable steel fabrication and erection services.</p>
+        </div>
+
+        <div class="service-card">
+            <h3>Project Management</h3>
+            <p>End-to-end project planning and execution support.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ---------------------------------------service ends here-------------- -->
+
+
+<!-- ---------------------------------price start ------------------------- -->
+
+<section class="pricing">
+    <h2>Pricing Plans</h2>
+    <div class="price-box">
+        <div class="price-card">
+            <h3>Basic</h3>
+            <h1>$299</h1>
+            <p>Site Inspection</p>
+            <p>Basic Planning</p>
+            <p>Email Support</p>
+            <a href="#">Choose Plan</a>
+        </div>
+
+
+        <div class="price-card different">
+            <h3>Standard</h3>
+            <h1>$599</h1>
+            <p>Project Planning</p>
+            <p>Site Supervision</p>
+            <p>24/7 Support</p>
+            <a href="#">Choose Plan</a>
+        </div>
+
+
+        <div class="price-card">
+            <h3>Premium</h3>
+            <h1>$999</h1>
+            <p>Full Construction</p>
+            <p>Advanced Management</p>
+            <p>Priority Support</p>
+            <a href="#">Choose Plan</a>
+        </div>
+    </div>
+</section>
+
+<!-- ===== PRICING END ===== -->
+
+
+<!-- ===== HOW WE WORK START ===== -->
+
+<section class="process">
+    <h2>How We Work</h2>
+    <div class="process-box">
+        <div class="process-card">
+            <span>1</span>
+            <h3>Consultation</h3>
+            <p>We understand client requirements and project goals.</p>
+        </div>
+
+        <div class="process-card">
+            <span>2</span>
+            <h3>Planning</h3>
+            <p>We prepare detailed design and project planning.</p>
+        </div>
+
+        <div class="process-card">
+            <span>3</span>
+            <h3>Execution</h3>
+            <p>Skilled engineers execute the construction work.</p>
+        </div>
+
+        <div class="process-card">
+            <span>4</span>
+            <h3>Delivery</h3>
+            <p>We ensure timely project completion with quality.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ===== HOW WE WORK END ===== -->
+
+<!-- -----------------------------------------footer start ---------------- -->
+
+<footer class="footer">
+    <div class="overlayy"></div>
+    <div class="footer-content">
+        <div class="footer1">
+            <h2>Construx</h2>
+            <p>We deliver modern industrial construction solutions withinnovation, safety, and quality standards.</p>
+        </div>
+
+        <div class="footer2">
+            <h3>Quick Links</h3>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Team</a>
+            <a href="#">Careers</a>
+            <a href="#">Contact</a>
+        </div>
+
+
+        <div class="footer3">
+            <h3>Contact</h3>
+            <p>+91 88888 88888</p>
+            <p>construx@info.com</p>
+            <p>Banglore, India</p>
+
+        </div>
+
+
+        <div class="footer4">
+            <h3>Our Location</h3>
+            <img src="https://bridge510.qodeinteractive.com/wp-content/uploads/2018/12/footer-img-01.png" alt="map">
+        </div>
+    </div>
+
+
+    <div class="bottom">
+        © 2026 Construx. All Rights Reserved.
+    </div>
+
+</footer>
+
+<!-- ---------------------------------END ----------------------- -->
+</body>
+</html>

@@ -1,0 +1,814 @@
+*{
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+.topbar{
+    width:100%;
+    background:black;
+    padding:12px 120px;
+}
+
+.topbar-container{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:20px;
+}
+
+.topbar-item{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    color:#ffffff;
+    font-size:14px;
+    font-weight:400;
+}
+
+.topbar-item i{
+    color:#FF7A00;
+    font-size:15px;
+}
+
+/* ------------------------------------------------------------topbar ends here. */
+
+
+/* ------------------------------------------------------------Nav start here. */
+
+
+.navbar{
+    width:100%;
+    background:#0B1F3A;
+    padding:18px 120px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:20px;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.logo img{
+    width:55px;
+    height:55px;
+    object-fit:cover;
+    border-radius:50%;
+}
+
+.logo h2{
+    color:#ffffff;
+    font-size:30px;
+    font-weight:700;
+    letter-spacing:1px;
+}
+
+.logo h2 span{
+    color:#FF7A00;
+}
+
+nav{
+    display:flex;
+    align-items:center;
+    gap:35px;
+}
+
+nav a{
+    color:#ffffff;
+    font-size:20px;
+    font-weight:500;
+    transition:0.4s;
+    text-decoration: none;
+}
+
+nav a:hover{
+    padding: 5px;
+    background-color:grey;
+    border-radius: 10px;
+    color:#FF7A00;
+}
+
+.btn{
+    background:#FF7A00;
+    color:#ffffff;
+    padding:13px 28px;
+    border-radius:5px;
+    font-size:20px;
+    transition:0.4s;
+    text-decoration: none;
+}
+
+.btn:hover{
+    background:#ffffff;
+    color:#0B1F3A;
+}
+
+/* ------------------------------------------------------------Nav ends here. */
+
+
+/* ------------------------------------------------------------Hero ends here. */
+
+.hero{
+    width:100%;
+    height:100vh;
+    padding:0 120px;
+    background:url("https://bridge510.qodeinteractive.com/wp-content/uploads/2019/04/main-home-rev-slider-img-03.jpg");
+    background-position: center;
+    background-size: cover;
+    position:relative;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.overlay{
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.65);
+    position:absolute;
+    top:0;
+    left:0;
+}
+
+.hero-content{
+    position:absolute;
+    max-width:800px;
+    text-align:center;
+    animation:heroContent 2s ease forwards;
+}
+@keyframes heroContent{
+
+    from{
+        opacity:0;
+        transform:translateY(200px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+.hero-content h4{
+    color:#FF7A00;
+    font-size:18px;
+    letter-spacing:2px;
+    margin-bottom:20px;
+}
+
+.hero-content h1{
+    color:#ffffff;
+    font-size:75px;
+    line-height:1.2;
+    margin-bottom:40px;
+}
+
+.hero-btns{
+    display:flex;
+    gap:20px;
+    justify-content:center;
+}
+
+.btn, .contact-btn{
+    padding:15px 32px;
+    border-radius:5px;
+    font-size:20px;
+    transition:0.4s;
+    text-decoration: none;
+}
+
+.btn{
+    background:#FF7A00;
+    color:#ffffff;
+}
+
+.btn:hover{
+    transform:translateY(-5px);
+    background:#ffffff;
+    color:#0B1F3A;
+}
+
+.contact-btn{
+    border:2px solid #ffffff;
+    color:#ffffff;
+}
+
+.contact-btn:hover{
+    background:#FF7A00;
+    border-color:#FF7A00;
+    transform:translateY(-5px);
+}
+
+ /* ------------------------------------------------------------hero ends here. */ 
+
+/* -----------------------------------------about start----------- */
+
+.about{
+    width:100%;
+    background-color: whitesmoke;
+    padding:100px 120px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:70px;
+}
+
+.about-image{
+    flex:1;
+    border-radius:15px;
+    overflow:hidden;
+    animation:aboutImage 1.2s ease;
+}
+@keyframes aboutImage{
+    from{
+        opacity:0;
+        transform:translateX(-80px);
+    }
+    to{
+        opacity:1;
+       transform:translateX(0);
+    }
+}
+.about-image img{
+    width:100%;
+    border-radius:15px;
+    transition:0.5s;
+}
+.about-image:hover img{
+    transform:scale(1.1);
+}
+.about-text{
+    flex:1;
+    animation:aboutText 2s ease;
+}
+@keyframes aboutText{
+    from{
+        opacity:0;
+        transform:translateX(80px);
+    }
+    to{
+        opacity:1;
+        transform:translateX(0);
+    }
+}
+.about-text h4{
+    color:#FF7A00;
+    font-size:18px;
+    letter-spacing:2px;
+    margin-bottom:20px;
+}
+
+.about-text h2{
+    color:#0B1F3A;
+    font-size:48px;
+    line-height:1.3;
+    margin-bottom:25px;
+}
+
+.about-text p{
+    color:#555;
+    font-size:16px;
+    line-height:1.8;
+    margin-bottom:40px;
+}
+.aboutbtn{
+    background:#FF7A00;
+    color:#ffffff;
+    padding:13px 28px;
+    border-radius:5px;
+    font-size:15px;
+    font-weight:500;
+    text-decoration: none;
+    transition:0.4s;
+}
+
+.aboutbtn:hover{
+    background:#0B1F3A;
+    color:white;
+}
+
+
+/* -------------------------------------about ends here--------------- */
+
+
+/* -----------------------------------------------------------services start here. */
+
+.services{
+    padding:100px 120px;
+    background:#f5f5f5;
+    text-align:center;
+}
+.services h4{
+    color:#0B1F3A;
+    font-size:18px;
+    letter-spacing: 2px;
+    margin-bottom:40px;
+}
+.services h1{
+    color:#FF7A00;
+    font-size:55px;
+    margin-bottom:20px;
+}
+.service-box{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+}
+
+.service-card{
+    background:#0B1F3A;
+    padding-bottom:35px;
+    border-radius:15px;
+    overflow:hidden;
+    transition:0.4s;
+}
+
+.service-card:hover{
+    background:#FF7A00;
+    transform:translateY(-10px);
+    box-shadow:0 10px 25px 10px rgba(0,0,0,0.1);
+}
+
+.service-card img{
+    width:100%;
+    height:230px;
+    object-fit:cover;
+    transition: 0.4s;
+}
+.service-card img:hover{
+    transform: scale(1.1);
+}
+
+.service-card i{
+    background:#FF7A00;
+    color:#ffffff;
+    padding:18px;
+    font-size:22px;
+    border-radius:12px;
+    margin-top:30px;
+}
+
+.service-card:hover i{
+    background:#0B1F3A;
+}
+
+.service-card h3{
+    margin-bottom: 30px;
+    color:#ffffff;
+    font-size:26px;
+    margin-top:25px;
+    margin-right:0;
+    margin-bottom:40px;
+    margin-left:0;
+    transition:0.4s ease;
+}
+
+.service-card:hover h3{
+    color:#111111;
+}
+
+.service-card a{
+    text-decoration: none;
+    border:2px solid #ffffff;
+    color:#ffffff;
+    padding:12px 25px;
+    border-radius:5px;
+    transition:0.4s;
+}
+
+.service-card a:hover{
+    background:#ffffff;
+    color:#0B1F3A;
+}
+
+/* -----------------------------------------------------------services ends here. */
+
+
+/* -----------------------------------------------------------stats start here. */
+
+.stats{
+    padding:100px 120px;
+}
+
+.stats-box{
+    background:#0B1F3A;
+    border-radius:15px;
+    padding:60px 40px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    text-align:center;
+    box-shadow: 2px 2px 2px 2px black;
+    animation:float 2s ease-in-out infinite;
+}
+
+@keyframes float{
+
+    0%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-35px);
+    }
+
+    100%{
+        transform:translateY(0);
+    }
+
+}
+
+
+.stat{
+    flex:1;
+    border-right:1px solid rgba(255,255,255,0.2);
+    transition: 0.5s;
+}
+.stat:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.stat h1{
+    color:#FF7A00;
+    font-size:55px;
+    margin-bottom:15px;
+}
+
+.stat h4{
+    color:#ffffff;
+    font-size:18px;
+    font-weight:500;
+}
+
+
+
+/* ---------------------------------------- Stats end here.------------------------------------ */
+
+
+/* -----------------------------------------why to choose us start-------------------- */
+
+.why{
+    padding:100px 120px;
+    display:flex;
+    align-items:center;
+    gap:70px;
+}
+
+.why-image{
+    flex:1;
+    border-radius:15px;
+    overflow:hidden;
+    object-fit: cover;
+}
+
+.why-image img{
+    width:100%;
+    border-radius:15px;
+    transition:0.5s ;
+}
+
+.why-image:hover img{
+    transform:scale(1.1);
+}
+
+.why-text{
+    flex:1;
+}
+
+.why-text h4{
+    color:#FF7A00;
+    font-size:18px;
+    letter-spacing:2px;
+    margin-bottom:15px;
+}
+
+.why-text h2{
+    color:#0B1F3A;
+    font-size:45px;
+    line-height:1.3;
+    margin-bottom:25px;
+}
+
+.why-text p{
+    color:#555;
+    line-height:1.8;
+    margin-bottom:30px;
+}
+
+.why-text ul{
+    margin-bottom:40px;
+    padding-left:40px;
+   
+}
+
+.why-text li{
+    font-size:17px;
+    color:#222;
+    margin-bottom:18px;
+    opacity:0;
+    list-style-type: square;
+}
+
+.up1{
+    animation:slideUp 0.8s ease forwards;
+}
+.up2{
+    animation:slideUp 1s ease forwards;
+}
+.up3{
+    animation:slideUp 1.2s ease forwards;
+}
+.up4{
+    animation:slideUp 1.4s ease forwards;
+}
+
+.up5{
+    animation:slideUp 1.6s ease forwards;
+}
+.up6{
+    animation:slideUp 1.8s ease forwards;
+}
+@keyframes slideUp{
+
+    from{
+        opacity:0;
+        transform:translateY(60px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+/* -------------------------------------------------------why to choose ends here----------------- */
+
+
+/* -------------------------------------------------------reviews start here----------------- */
+
+.reviews{
+    padding:100px 120px;
+    text-align:center;
+    background:#f5f5f5;
+}
+.reviews h2{
+    color:#0B1F3A;
+    margin-bottom:50px;
+}
+.review-box{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap:40px;
+}
+.review-card{
+    background:#0B1F3A;
+    color:#fff;
+    padding:40px 25px 30px;
+    border-radius:15px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.1);
+    transition:0.4s;
+}
+
+.review-card:hover{
+    transform:translateY(-10px);
+    background:#FF7A00;
+    color:#111;
+}
+
+.client-img{
+    width:80px;
+    height:80px;
+    margin:0 auto 20px;
+    border-radius:50%;
+    overflow:hidden;
+    border:3px solid #FF7A00;
+}
+
+.client-img img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.review-card h3{
+    margin-top:15px;
+    color:#FF7A00;
+}
+
+.review-card:hover h3{
+    color:#0B1F3A;
+}
+
+/* ------------------------------------reviews ends here------------------ */
+
+
+/* ---------------------------------------------faq starts here------------------ */
+
+.faq{
+    padding:100px 120px;
+    display:flex;
+    gap:40px;
+}
+
+.faq-left{
+    flex:1;
+    background:#0B1F3A;
+    padding:50px;
+    border-radius:15px;
+}
+
+.faq-left h4{
+    color:#FF7A00;
+    font-size:18px;
+    letter-spacing:2px;
+    margin-bottom:20px;
+}
+
+.faq-left h2{
+    color:#ffffff;
+    font-size:45px;
+    margin-bottom:25px;
+}
+
+.faq-left p{
+    color:#dddddd;
+    line-height:1.8;
+}
+.faq-image{
+    margin-top:35px;
+    border-radius:15px;
+    overflow:hidden;
+}
+
+.faq-image img{
+    width:100%;
+    height:400px;
+    object-fit:cover;
+    border-radius:15px;
+    transition:0.5s;
+}
+
+.faq-image:hover img{
+    transform:scale(1.1);
+}
+
+.faq-right{
+    flex:1;
+}
+
+.faq-box{
+    background:#ffffff;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+    margin-bottom:25px;
+    transition: 0.4s;
+}
+.faq-box:hover{
+    transform: translateY(-8px);
+    box-shadow: 2px 2px 2px black;
+}
+
+.faq-box h3{
+    color:#0B1F3A;
+    font-size:22px;
+    margin-bottom:20px;
+}
+
+.faq-box button{
+    background:#FF7A00;
+    color:#ffffff;
+    border:none;
+    padding:12px 24px;
+    border-radius:5px;
+    cursor:pointer;
+    transition:0.4s;
+    margin-bottom:20px;
+}
+
+.faq-box button:hover{
+    background:#0B1F3A;
+}
+
+
+/* -------------------------------------------------------faqs end here------------ */
+
+
+/* -----------------------clients start------------------ */
+
+.clients{
+    padding:80px 120px;
+    text-align:center;
+    background:#f5f5f5;
+}
+
+.clients h2{
+    color:#0B1F3A;
+    margin-bottom:30px;
+}
+
+.clients img{
+    width:120px;
+    height:60px;
+    object-fit:cover;
+    margin:0 30px;
+}
+
+
+/* -------------------------------------------clients end here----------------- */
+
+
+/* -------------------------------------------Footer start----------------------- */
+
+.footer{
+    background:url("https://img.freepik.com/premium-photo/construction-site-night-with-floodlights-illuminating-area_1057859-654.jpg");
+    position:relative;
+    color:#fff;
+    background-size:150%;
+    background-repeat:no-repeat;
+    animation:footerMove 8s linear infinite alternate;
+}
+@keyframes footerMove{
+
+   from{
+   background-position:left;
+}
+
+to{
+   background-position:right;
+}
+
+}
+.overlayy{
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.65);
+    position:absolute;
+    top:0;
+    left:0;
+}
+
+.footer-content{
+    position: relative;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:40px;
+    padding:80px 120px;
+}
+
+.footer h2,
+.footer h3{
+    color:#FF7A00;
+    margin-bottom:20px;
+}
+
+.footer p,
+.footer a{
+    color:#ddd;
+    display:block;
+    margin-bottom:10px;
+    text-decoration:none;
+}
+
+.footer a:hover{
+    color:#FF7A00;
+}
+.footer1 p{
+    max-width: 200px;
+}
+
+.footer4 img{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+    border-radius:10px;
+    transition:0.5s ease;
+}
+
+.footer4 img:hover{
+    transform:scale(1.1);
+}
+
+.bottom{
+    text-align:center;
+    padding:20px;
+    border-top:1px solid rgba(255,255,255,0.2);
+    background:rgba(11,31,58,0.85);
+}
+
+
+/* ------------------------------------------------footer ends here---------------- */
+
+
+
+
+
+
+
