@@ -1,0 +1,1201 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.mainheader{
+    width:100%;
+    padding:20px 0px;
+    background:#0f172a;
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:10;
+}
+
+.navcontainer{
+    width:90%;
+    margin:auto;
+    display:flex;
+    align-items:center;
+}
+
+.navlogo{
+    font-size:32px;
+    font-weight:bold;
+    color:#fff;
+}
+
+.navlogo span{
+    color:#f59e0b;
+}
+
+.navbar{
+    display:flex;
+    gap:35px;
+    margin-left:auto;
+    margin-right:50px;
+}
+
+.navbar a{
+    text-decoration:none;
+    color:#fff;
+    font-size:18px;
+    transition:0.3s;
+}
+
+.navbar a:hover{
+    color:#f59e0b;
+}
+
+.navbutton{
+    text-decoration:none;
+    background:#f59e0b;
+    color:#fff;
+    padding:12px 24px;
+    border-radius:5px;
+    transition:0.3s;
+}
+
+.navbutton:hover{
+    background:#fff;
+    color:#0f172a;
+}
+
+#menu{
+    display:none;
+}
+
+.menuicon{
+    display:none;
+    font-size:28px;
+    color:#fff;
+    cursor:pointer;
+}
+/* ---------------------------------------------nav bar media queries  */
+/* -------------------- TABLET -------------------- */
+
+@media(max-width:992px){
+
+    .navcontainer{
+        width:95%;
+    }
+
+    .navbar{
+        gap:20px;
+        margin-right:20px;
+    }
+
+    .navbar a{
+        font-size:16px;
+    }
+
+    .navbutton{
+        padding:10px 18px;
+        font-size:15px;
+    }
+
+}
+
+
+/* -------------------- MOBILE -------------------- */
+
+@media(max-width:768px){
+
+    .mainheader{
+        padding:18px 0;
+    }
+
+    .navcontainer{
+        flex-direction:column;
+        align-items:flex-start;
+        position:relative;
+    }
+
+    .navlogo{
+        font-size:28px;
+    }
+
+    .menuicon{
+        display:block;
+        position:absolute;
+        top:5px;
+        right:0;
+        font-size:26px;
+    }
+
+    .navbar{
+        width:100%;
+        display:none;
+        flex-direction:column;
+        gap:18px;
+        margin-top:25px;
+    }
+
+    .navbar a{
+        width:100%;
+        padding:10px 0;
+        border-bottom:1px solid rgba(255,255,255,0.1);
+    }
+
+    .navbutton{
+        display:none;
+    }
+
+    #menu:checked ~ .navbar{
+        display:flex;
+    }
+
+}
+
+
+/* -------------------- SMALL MOBILE -------------------- */
+
+@media(max-width:480px){
+
+    .mainheader{
+        padding:15px 0;
+    }
+
+    .navlogo{
+        font-size:24px;
+    }
+
+    .menuicon{
+        font-size:24px;
+        top:2px;
+    }
+
+    .navbar{
+        gap:15px;
+        margin-top:20px;
+    }
+
+    .navbar a{
+        font-size:15px;
+        padding:8px 0;
+    }
+
+}
+/* ------------------------------------nav bar ends here---------------------*/
+
+
+.hero{
+    width:100%;
+    height:100vh;
+    background-image: url('https://img.freepik.com/premium-photo/business-team-night-meeting_1030879-65008.jpg');
+    background-position: center;
+    background-size: cover;
+    position:relative;
+    overflow:hidden;
+    animation:zoom 2s linear infinite alternate;
+   
+
+}
+@keyframes zoom{
+
+    from{
+        background-size:100%;
+    }
+
+    to{
+        background-size:115%;
+    }
+}
+
+.herooverlay{
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.6);
+    position:absolute;
+    top:0;
+    left:0;
+}
+
+.herocontent{
+    width:90%;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    color:#fff;
+    text-align:center;
+}
+
+.herocontent h3{
+    font-size:20px;
+    color:#f59e0b;
+    margin-bottom:15px;
+    opacity:0;
+    animation:fade 2s forwards;
+}
+
+.herocontent h1{
+    max-width:700px;
+    font-size:65px;
+    line-height:1.2;
+    margin-bottom:20px;
+    opacity:0;
+    animation:fade 3s forwards;
+    margin-left:auto;
+    margin-right:auto;
+    color:transparent;
+    -webkit-text-stroke:2px #0745fdfc;
+}
+
+.herocontent p{
+    max-width:650px;
+    font-size:18px;
+    line-height:1.7;
+    margin-bottom:35px;
+    opacity:0;
+    animation:fade 4s forwards;
+    margin-left:auto;
+    margin-right:auto;
+}
+@keyframes fade{
+
+    from{
+        opacity:0;
+    }
+
+    to{
+        opacity:1;
+    }
+
+}
+.herobuttons{
+    display:flex;
+    gap:20px;
+    margin-top: 60px;
+}
+
+.leftbutton, .rightbutton{
+    text-decoration:none;
+    padding:14px 30px;
+    border-radius:5px;
+    transition:0.3s;
+}
+
+.leftbutton{
+    background:#f59e0b;
+    color:#fff;
+     margin-left:auto;
+    margin-right:auto;
+    transform:translateX(-200px);
+    animation:left 1s forwards;
+}
+@keyframes left{
+
+    to{
+        transform:translateX(200px);
+    }
+
+}
+.leftbutton:hover{
+    background:#fff;
+    color:#0f172a;
+}
+.rightbutton{
+    background:#fff;
+    color:#0f172a;
+    transform:translateX(250px);
+     margin-left:auto;
+    margin-right:auto;
+    animation:right 1s forwards;
+}
+@keyframes right{
+
+    to{
+        transform:translateX(-250px);
+    }
+
+}
+.rightbutton:hover{
+    background:#f59e0b;
+    color:#fff;
+}
+
+
+/* -------------------------------- HERO MEDIA QUERIES ---------------------------- */
+
+/* -------------------- TAB -------------------- */
+@media(max-width:992px){
+
+    .herocontent h1{
+        font-size:55px;
+    }
+
+    .herocontent p{
+        font-size:17px;
+    }
+}
+
+/* -------------------- MOBILE -------------------- */
+@media(max-width:768px){
+
+    .hero{
+        height:auto;
+        padding:180px 0 120px;
+    }
+
+    .herocontent{
+        position:static;
+        transform:none;
+        width:90%;
+        margin:auto;
+    }
+
+    .herocontent h3{
+        font-size:18px;
+    }
+
+    .herocontent h1{
+        font-size:42px;
+    }
+
+    .herocontent p{
+        font-size:16px;
+        line-height:1.8;
+    }
+
+    .herobuttons{
+        flex-direction:column;
+        align-items:center;
+        gap:20px;
+        margin-top:40px;
+    }
+
+    .leftbutton,.rightbutton{
+        transform:none;
+        animation:none;
+        margin:0;
+    }
+
+}
+
+/* -------------------- SMALL MOBILE -------------------- */
+@media(max-width:480px){
+
+    .hero{
+        padding:160px 0 100px;
+    }
+
+    .herocontent h3{
+        font-size:16px;
+    }
+
+    .herocontent h1{
+        font-size:32px;
+        line-height:1.3;
+    }
+
+    .herocontent p{
+        font-size:15px;
+    }
+
+    .leftbutton,.rightbutton{
+        width:100%;
+        text-align:center;
+        padding:14px;
+    }
+
+}
+
+/* -------------------------------------------------------why joins u----------------- */
+
+.joinsection{
+    width:100%;
+    padding:100px 0;
+    background:#0f172a;
+}
+
+.joinheading{
+    text-align:center;
+    color:#fff;
+    margin-bottom:60px;
+}
+
+.joinheading h3{
+    color:#f59e0b;
+    margin-bottom:10px;
+}
+
+.joinheading h1{
+    font-size:45px;
+}
+
+.joincontainer{
+    width:90%;
+    margin:auto;
+    display:flex;
+    gap:30px;
+}
+
+.joinone,.jointwo,.jointhree{
+    width:33.33%;
+    background:#111827;
+    padding:40px 30px;
+    border-top:4px solid #f59e0b;
+    border-radius:10px;
+    text-align:center;
+    color:#fff;
+    transition:0.4s;
+}
+
+.joinone i,.jointwo i,.jointhree i{
+    font-size:40px;
+    color:#f59e0b;
+    margin-bottom:20px;
+}
+
+.joinone h2,.jointwo h2,.jointhree h2{
+    margin-bottom:15px;
+}
+
+.joinone p,.jointwo p,.jointhree p{
+    color:#ccc;
+    line-height:1.7;
+}
+
+.joinone:hover{
+    transform:skewY(-5deg);
+    box-shadow:0 0 20px 10px orange;
+}
+.jointwo:hover{
+    transform: translateY(-10px);
+    box-shadow:0 0 20px 10px orange;
+}
+.jointhree:hover{
+    transform: skewX(5deg);
+    box-shadow:0 0 20px 10px orange;
+}
+
+/* -------------------- TAB -------------------- */
+@media(max-width:992px){
+
+    .joincontainer{
+        gap:20px;
+    }
+
+    .joinone,.jointwo,.jointhree{
+        padding:35px 20px;
+    }
+
+    .joinheading h1{
+        font-size:38px;
+    }
+
+}
+
+/* -------------------- MOBILE -------------------- */
+@media(max-width:768px){
+
+    .joinsection{
+        padding:80px 0;
+    }
+
+    .joinheading{
+        margin-bottom:40px;
+    }
+
+    .joinheading h1{
+        font-size:32px;
+    }
+
+    .joincontainer{
+        flex-direction:column;
+    }
+
+    .joinone,.jointwo,.jointhree{
+        width:100%;
+    }
+
+}
+
+/* -------------------- SMALL MOBILE -------------------- */
+@media(max-width:480px){
+
+    .joinsection{
+        padding:60px 0px;
+    }
+
+    .joinheading h3{
+        font-size:16px;
+    }
+
+    .joinheading h1{
+        font-size:28px;
+    }
+
+    .joinone,.jointwo,.jointhree{
+        padding:30px 18px;
+    }
+
+    .joinone i,.jointwo i,.jointhree i{
+        font-size:32px;
+    }
+
+}
+
+
+/* --------------------------------------------------benefits---------------------- */
+
+.benefitsection{
+    width: 100%;
+    padding: 100px 0px;
+    background: #111827;
+}
+.benefitheading{
+    text-align: center;
+    color:#fff;
+    margin-bottom:60px;
+}
+
+.benefitheading h3{
+    color:#f59e0b;
+    margin-bottom:10px;
+}
+
+.benefitheading h1{
+    font-size:45px;
+}
+.benefits{
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    align-items: center;
+}
+.benefitsimage{
+    width:45%;
+    margin-right: 50px;
+    border-radius: 10px;
+    overflow: hidden;
+    animation: skid 2s linear infinite alternate;
+}
+@keyframes skid{
+    from{
+        transform:skew(-10deg);
+        border-left: 10px solid rgb(255, 0, 0);
+        border-right: 10px solid rgb(0, 68, 255);
+        border-top: 10px solid rgb(38, 255, 5);
+        border-bottom: 10px solid rgb(255, 1, 247);
+    }
+    to{
+        transform: skew(10deg);
+        border-right: 10px solid rgb(255, 0, 0);
+        border-left: 10px solid rgb(0, 68, 255);
+        border-bottom: 10px solid rgb(38, 255, 5);
+        border-top: 10px solid rgb(255, 1, 247);
+    }
+}
+.benefitsimage img{
+    width: 100%;
+    height:320px;
+}
+
+
+.benefitcontainer{
+    width:50%;
+    margin:auto;
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+.benefitcontainer h2{
+    text-align: center;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    width:230px;
+    overflow:hidden;
+    white-space:nowrap;
+    border-right:3px solid #f59e0b;
+    margin:auto;
+    color:#f59e0b;
+    animation:typing 3s infinite;
+}
+
+@keyframes typing{
+
+    0%{
+        width:0;
+    }
+
+    50%{
+        width:230px;
+    }
+
+    100%{
+        width:0;
+    }
+
+}
+
+.storycard{
+    display:flex;
+    align-items:center;
+    gap:20px;
+    background:rgba(255,255,255,0.08);
+    padding:20px;
+    border-radius:15px;
+    width:100%;
+    max-width:80px;
+    transition: 0.6s; 
+    cursor:pointer;
+}
+
+.storycard i{
+    font-size:30px;
+    color:#f59e0b;
+    transition:0.4s;
+}
+
+.content{
+    opacity:0;
+    transition:0.4s;
+    color:#fff;
+    white-space:nowrap;
+}
+
+.storycard:hover{
+    max-width:100%;
+    box-shadow:0 0 25px rgba(245,158,11,0.4);
+    border:1px solid #f59e0b;
+}
+
+.storycard:hover .content{
+    opacity:1;
+  
+}
+
+.storycard:hover i{
+    transform:scale(1.2);
+}
+
+/* -------------------- TABLET -------------------- */
+@media(max-width:992px){
+
+    .benefitheading h1{
+        font-size:38px;
+    }
+
+    .benefits{
+        gap:30px;
+    }
+
+    .benefitcontainer{
+        width:55%;
+    }
+
+    .benefitsimage{
+        width:45%;
+        padding-right:30px;
+    }
+
+    .benefitsimage img{
+        height:250px;
+    }
+
+}
+
+/* -------------------- MOBILE -------------------- */
+@media(max-width:768px){
+
+    .benefitsection{
+        padding:80px 0px;
+    }
+
+    .benefitheading h1{
+        font-size:32px;
+    }
+
+    .benefits{
+        flex-direction:column;
+        gap:40px;
+    }
+
+    .benefitcontainer{
+        width:90%;
+    }
+
+    .benefitsimage{
+        width:90%;
+        padding-right:0;
+    }
+
+    .benefitsimage img{
+        width:100%;
+        height:auto;
+        margin-right:0;
+    }
+
+    .storycard{
+        max-width:100%;
+    }
+
+    .storycard .content{
+        opacity:1;
+    }
+
+}
+
+/* -------------------- SMALL MOBILE -------------------- */
+@media(max-width:480px){
+    .benefitsection{
+        padding:60px 0px;
+    }
+    .benefitheading h3{
+        font-size:16px;
+    }
+    .benefitheading h1{
+        font-size:26px;
+    }
+
+    .benefitcontainer{
+        width:95%;
+    }
+
+    .storycard{
+        padding:18px;
+        gap:15px;
+    }
+
+    .storycard i{
+        font-size:24px;
+    }
+
+    .storycard .content h3{
+        font-size:18px;
+    }
+
+    .storycard .content p{
+        font-size:14px;
+        line-height:1.6;
+    }
+
+}
+/* -------------------------------------job openings ------------------------------- */
+
+.jobsection{
+    width:100%;
+    padding:100px 0;
+    background:#0f172a;
+}
+
+.jobheading{
+    text-align:center;
+    color:#fff;
+    margin-bottom:60px;
+}
+
+.jobheading h3{
+    color:#f59e0b;
+    margin-bottom:10px;
+}
+
+.jobheading h1{
+    font-size:45px;
+}
+
+.jobcontainer{
+    width:80%;
+    margin:auto;
+    border-left:3px solid #f59e0b;
+    padding-left:40px;
+    text-align: center;
+}
+
+.jobcard{
+    background:#111827;
+    padding:30px;
+    margin-bottom:40px;
+    border-radius:15px;
+    border: 2px dashed orange;
+    position:relative;
+}
+.jobcard:hover{
+    border:4px solid red;
+}
+.jobcard::before{
+    content:"";
+    width:40px;
+    height:40px;
+    border-radius:50%;
+    position:absolute;
+    left:-64px;
+    top:50%;
+    transform:translateY(-50%);
+    animation: dark 2s linear infinite;
+}
+@keyframes dark{
+    0%{
+        background-color: red;
+    }
+    25%{
+        background-color: orange;
+    }
+    100%{
+        background-color: blue;
+    }
+}
+.jobcard h2{
+    color:orange;
+    margin-bottom:15px;
+}
+
+.jobcard p{
+    color:#ccc;
+    margin-bottom:25px;
+}
+.jobcard button{
+    font-size: 20px;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 5px;
+    background-color: orange;
+    color: #1e293b;
+    transition: 0.4s;
+}
+.jobcard button:hover{
+    transform: scale(1.1);
+    background-color: #111827;
+    border: 2px solid red;
+    color: orange;
+    cursor: pointer;
+}
+
+/* -----------------------------------992px--------------------- */
+
+@media(max-width:992px){
+
+    .jobcontainer{
+        width:90%;
+    }
+
+    .jobheading h1{
+        font-size:38px;
+    }
+
+    .jobcard{
+        padding:25px;
+    }
+
+    .jobcard h2{
+        font-size:28px;
+    }
+
+    .jobcard button{
+        font-size:18px;
+        padding:13px 25px;
+    }
+
+}
+
+/* -----------------------------------768px--------------------- */
+
+@media(max-width:768px){
+
+    .jobsection{
+        padding:80px 0;
+    }
+
+    .jobheading h1{
+        font-size:34px;
+    }
+
+    .jobcontainer{
+        width:95%;
+        padding-left:30px;
+    }
+
+    .jobcard{
+        padding:25px 20px;
+    }
+
+    .jobcard::before{
+        width:30px;
+        height:30px;
+        left:-48px;
+    }
+
+    .jobcard h2{
+        font-size:24px;
+    }
+
+    .jobcard p{
+        font-size:15px;
+        line-height:1.7;
+    }
+
+    .jobcard button{
+        font-size:16px;
+        padding:12px 22px;
+    }
+
+}
+
+
+/* ----------------------------------------------------form------------------------- */
+
+.careerformsection{
+    width:100%;
+    padding:100px 0;
+    background:#0f172a;
+}
+
+.careerform{
+    width:50%;
+    margin:auto;
+    padding:50px;
+    background:linear-gradient(to right,#1e293b,#111827);
+    border-radius:15px;
+}
+
+.careerform h2{
+    text-align:center;
+    color:#fff;
+    margin-bottom:40px;
+}
+
+.careerform form{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+.careerform input,.careerform select,.careerform textarea{
+    width:100%;
+    padding:15px;
+    border:none;
+    outline:none;
+    border-radius:8px;
+    background:#fff;
+}
+
+.careerform textarea{
+    height:150px;
+    resize:none;
+}
+
+.formbuttons{
+    display:flex;
+    gap:20px;
+}
+
+.formbuttons button{
+    width:50%;
+    padding:15px;
+    border:none;
+    border-radius:8px;
+    background:#f59e0b;
+    color:#fff;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.formbuttons button:hover{
+    background:#fff;
+    color:#0f172a;
+}
+/* -------------------- TAB -------------------- */
+@media(max-width:992px){
+
+    .careerform{
+        width:70%;
+        padding:40px;
+    }
+
+}
+
+/* -------------------- MOBILE -------------------- */
+@media(max-width:768px){
+
+    .careerformsection{
+        padding:80px 0px;
+    }
+
+    .careerform{
+        width:90%;
+        padding:35px 25px;
+    }
+
+    .careerform h2{
+        font-size:30px;
+        margin-bottom:30px;
+    }
+
+    .formbuttons{
+        flex-direction:column;
+    }
+
+    .formbuttons button{
+        width:100%;
+    }
+
+}
+
+/* -------------------- SMALL MOBILE -------------------- */
+@media(max-width:480px){
+
+    .careerformsection{
+        padding:60px 0px;
+    }
+
+    .careerform{
+        padding:30px 18px;
+    }
+
+    .careerform h2{
+        font-size:26px;
+    }
+
+    .careerform input,.careerform select,.careerform textarea{
+        padding:13px;
+        font-size:14px;
+    }
+
+    .formbuttons button{
+        padding:13px;
+        font-size:14px;
+    }
+
+}
+/* --------------------------------------footer----------------------------- */
+
+.footer{
+    background:url("https://png.pngtree.com/background/20230401/original/pngtree-dark-clouds-night-sea-waves-sea-water-advertising-background-picture-image_2249621.jpg");
+    position:relative;
+    color:#fff;
+    background-size:150%;
+    background-repeat:no-repeat;
+    animation:footerMove 8s linear infinite alternate;
+}
+@keyframes footerMove{
+
+   from{
+   background-position:left;
+}
+
+to{
+   background-position:right;
+}
+
+}
+.overlayy{
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.65);
+    position:absolute;
+    top:0;
+    left:0;
+}
+
+.footer-content{
+    position: relative;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:40px;
+    padding:80px 120px;
+}
+
+.footer h2,
+.footer h3{
+    color:#FF7A00;
+    margin-bottom:20px;
+}
+
+.footer p,
+.footer a{
+    color:#ddd;
+    display:block;
+    margin-bottom:10px;
+    text-decoration:none;
+}
+
+.footer a:hover{
+    color:#FF7A00;
+}
+.footer1 p{
+    max-width: 200px;
+} 
+
+.bottom{
+    text-align:center;
+    padding:20px;
+    border-top:1px solid rgba(255,255,255,0.2);
+    background:rgba(11,31,58,0.85);
+}
+
+
+@media(max-width:992px){
+.footer-content{
+    grid-template-columns:repeat(2,1fr);
+    gap:35px;
+    padding:70px 50px;
+}
+.footer h2,.footer h3{
+    margin-bottom:15px;
+}
+}
+
+/* -----------------------------------------mobile-------------- */
+
+@media(max-width:768px){
+.footer-content{
+    grid-template-columns:1fr;
+    padding:60px 20px;
+    text-align:center;
+    gap:40px;
+}
+.footer1 p{
+    max-width:100%;
+}
+.footer p,.footer a{
+    font-size:15px;
+}
+.bottom{
+    font-size:14px;
+    padding:18px;
+}
+}
+/* -------------------------------small----------------- */
+
+@media(max-width:480px){
+.footer-content{
+    padding:50px 15px;
+    gap:30px;
+}
+.footer h2{
+    font-size:28px;
+}
+.footer h3{
+    font-size:22px;
+}
+.footer p,.footer a{
+    font-size:14px;
+    line-height:1.6;
+}
+.bottom{
+    font-size:13px;
+    padding:15px;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

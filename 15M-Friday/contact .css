@@ -1,0 +1,1021 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.mainheader{
+    width:100%;
+    padding:20px 0px;
+    background:#0f172a;
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:10;
+}
+
+.navcontainer{
+    width:90%;
+    margin:auto;
+    display:flex;
+    align-items:center;
+}
+
+.navlogo{
+    font-size:32px;
+    font-weight:bold;
+    color:#fff;
+}
+
+.navlogo span{
+    color:#f59e0b;
+}
+
+.navbar{
+    display:flex;
+    gap:35px;
+    margin-left:auto;
+    margin-right:50px;
+}
+
+.navbar a{
+    text-decoration:none;
+    color:#fff;
+    font-size:18px;
+    transition:0.3s;
+}
+
+.navbar a:hover{
+    color:#f59e0b;
+}
+
+.navbutton{
+    text-decoration:none;
+    background:#f59e0b;
+    color:#fff;
+    padding:12px 24px;
+    border-radius:5px;
+    transition:0.3s;
+}
+
+.navbutton:hover{
+    background:#fff;
+    color:#0f172a;
+}
+
+#menu{
+    display:none;
+}
+
+.menuicon{
+    display:none;
+    font-size:28px;
+    color:#fff;
+    cursor:pointer;
+}
+/* ---------------------------------------------nav bar media queries  */
+/* -------------------- TABLET -------------------- */
+
+@media(max-width:992px){
+
+    .navcontainer{
+        width:95%;
+    }
+
+    .navbar{
+        gap:20px;
+        margin-right:20px;
+    }
+
+    .navbar a{
+        font-size:16px;
+    }
+
+    .navbutton{
+        padding:10px 18px;
+        font-size:15px;
+    }
+
+}
+
+
+/* -------------------- MOBILE -------------------- */
+
+@media(max-width:768px){
+
+    .mainheader{
+        padding:18px 0;
+    }
+
+    .navcontainer{
+        flex-direction:column;
+        align-items:flex-start;
+        position:relative;
+    }
+
+    .navlogo{
+        font-size:28px;
+    }
+
+    .menuicon{
+        display:block;
+        position:absolute;
+        top:5px;
+        right:0;
+        font-size:26px;
+    }
+
+    .navbar{
+        width:100%;
+        display:none;
+        flex-direction:column;
+        gap:18px;
+        margin-top:25px;
+    }
+
+    .navbar a{
+        width:100%;
+        padding:10px 0;
+        border-bottom:1px solid rgba(255,255,255,0.1);
+    }
+
+    .navbutton{
+        display:none;
+    }
+
+    #menu:checked ~ .navbar{
+        display:flex;
+    }
+
+}
+
+
+/* -------------------- SMALL MOBILE -------------------- */
+
+@media(max-width:480px){
+
+    .mainheader{
+        padding:15px 0;
+    }
+
+    .navlogo{
+        font-size:24px;
+    }
+
+    .menuicon{
+        font-size:24px;
+        top:2px;
+    }
+
+    .navbar{
+        gap:15px;
+        margin-top:20px;
+    }
+
+    .navbar a{
+        font-size:15px;
+        padding:8px 0;
+    }
+
+}
+/* ------------------------------------nav bar ends here---------------------*/
+
+.hero{
+    width:100%;
+    height:100vh;
+    background-image: url('https://rare-gallery.com/uploads/posts/755144-Ships-Cruise-liner-Sea-Night.jpg');
+    background-position: center;
+    background-size: cover;
+    position:relative;
+    overflow:hidden;
+        animation:zoomBg 2s linear infinite alternate;
+}
+@keyframes zoomBg{
+
+    from{
+        background-size:100%;
+    }
+
+    to{
+        background-size:115%;
+    }
+}
+
+.herooverlay{
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.6);
+    position:absolute;
+    top:0;
+    left:0;
+}
+
+.herocontent{
+    width:90%;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    color:#fff;
+    text-align:center;
+}
+
+.herocontent h3{
+    font-size:20px;
+    color:#f59e0b;
+    margin-bottom:15px;
+    opacity:0;
+    animation:fade 2s forwards;
+}
+
+.herocontent h1{
+    max-width:700px;
+    font-size:65px;
+    line-height:1.2;
+    margin-bottom:20px;
+    opacity:0;
+    animation:fade 3s forwards;
+    margin-left:auto;
+    margin-right:auto;
+    color:transparent;
+    -webkit-text-stroke:2px #00ff4cfc;
+}
+
+.herocontent p{
+    max-width:650px;
+    font-size:18px;
+    line-height:1.7;
+    margin-bottom:35px;
+    opacity:0;
+    animation:fade 4s forwards;
+    margin-left:auto;
+    margin-right:auto;
+}
+@keyframes fade{
+
+    from{
+        opacity:0;
+    }
+
+    to{
+        opacity:1;
+    }
+
+}
+.herobuttons{
+    display:flex;
+    gap:20px;
+    margin-top: 60px;
+}
+
+.leftbutton, .rightbutton{
+    text-decoration:none;
+    padding:14px 30px;
+    border-radius:5px;
+    transition:0.3s;
+}
+
+.leftbutton{
+    background:#f59e0b;
+    color:#fff;
+     margin-left:auto;
+    margin-right:auto;
+    transform:translateX(-200px);
+    animation:left 1s forwards;
+}
+@keyframes left{
+
+    to{
+        transform:translateX(200px);
+    }
+
+}
+.leftbutton:hover{
+    background:#fff;
+    color:#0f172a;
+}
+.rightbutton{
+    background:#fff;
+    color:#0f172a;
+    transform:translateX(250px);
+     margin-left:auto;
+    margin-right:auto;
+    animation:right 1s forwards;
+}
+@keyframes right{
+
+    to{
+        transform:translateX(-250px);
+    }
+
+}
+.rightbutton:hover{
+    background:#f59e0b;
+    color:#fff;
+}
+
+
+@media(max-width:992px){
+
+    .herocontent h1{
+        font-size:55px;
+    }
+
+    .herocontent p{
+        font-size:17px;
+    }
+
+}
+
+/* -------------------- MOBILE -------------------- */
+@media(max-width:768px){
+
+    .hero{
+        height:auto;
+        padding:180px 0 120px;
+    }
+
+    .herocontent{
+        position:static;
+        transform:none;
+        width:90%;
+        margin:auto;
+    }
+
+    .herocontent h3{
+        font-size:18px;
+    }
+
+    .herocontent h1{
+        font-size:42px;
+    }
+
+    .herocontent p{
+        font-size:16px;
+        line-height:1.8;
+    }
+
+    .herobuttons{
+        flex-direction:column;
+        align-items:center;
+        gap:20px;
+        margin-top:40px;
+    }
+
+    .leftbutton,
+    .rightbutton{
+        transform:none;
+        animation:none;
+        margin:0;
+    }
+
+}
+
+/* -------------------- SMALL MOBILE -------------------- */
+@media(max-width:480px){
+
+    .hero{
+        padding:160px 0 100px;
+    }
+
+    .herocontent h3{
+        font-size:16px;
+    }
+
+    .herocontent h1{
+        font-size:32px;
+        line-height:1.3;
+    }
+
+    .herocontent p{
+        font-size:15px;
+    }
+
+    .leftbutton,
+    .rightbutton{
+        width:100%;
+        text-align:center;
+        padding:14px;
+    }
+
+}
+/* ----------------------------------------numbers---------------------- */
+
+.contactinfosection{
+    width:100%;
+    padding:100px 0px;
+    background:#0f172a;
+}
+
+.contactinfoheading{
+    text-align:center;
+    color:#fff;
+    margin-bottom:60px;
+}
+
+.contactinfoheading h3{
+    color:#f59e0b;
+    margin-bottom:10px;
+}
+
+.contactinfoheading h1{
+    font-size:45px;
+}
+
+.contactinfocontainer{
+    width:90%;
+    margin:auto;
+    display:flex;
+    gap:30px;
+}
+
+.contact{
+    width:33.33%;
+    padding:40px 30px;
+    background:rgba(255,255,255,0.05);
+    border-radius:15px;
+    text-align:center;
+    color:#fff;
+    transition:0.4s;
+    box-shadow:0 0 30px 10px rgba(245,158,11,0.3);
+
+}
+.contact:hover{
+    background:linear-gradient(135deg,#00e5ff,#0061fe00,#fb0303);
+    animation:gradientMove 5s infinite;
+    background-size: 300% 300%;
+    transition:0.4s;
+    border:1px solid rgba(255,255,255,0.08);
+    }
+@keyframes gradientMove{
+    0%{
+        background-position:50%;
+    }
+    50%{
+        background-position:100%;
+    }
+    100%{
+        background-position:50%;
+    }
+
+}
+.icon{
+    font-size:40px;
+    color:#f59e0b;
+    margin-bottom:20px;
+    transition:0.5s;
+}
+
+.contact h2{
+    margin-bottom:15px;
+}
+
+.contact:hover{
+    transform: translateY(-10px);
+}
+
+
+.contact:hover .icon{
+    transform: rotate(360deg);
+}
+
+/* -------------------- TABLET -------------------- */
+@media(max-width:992px){
+
+    .contactinfocontainer{
+        gap:20px;
+    }
+
+    .contact{
+        padding:35px 20px;
+    }
+
+    .contact h2{
+        font-size:24px;
+    }
+
+    .contact p{
+        font-size:15px;
+    }
+
+}
+
+/* -------------------- MOBILE -------------------- */
+@media(max-width:768px){
+
+    .contactinfosection{
+        padding:80px 0px;
+    }
+
+    .contactinfoheading h1{
+        font-size:34px;
+    }
+
+    .contactinfocontainer{
+        flex-direction:column;
+    }
+
+    .contact{
+        width:100%;
+    }
+
+}
+
+/* -------------------- SMALL MOBILE -------------------- */
+@media(max-width:480px){
+
+    .contactinfosection{
+        padding:60px 0px;
+    }
+
+    .contactinfoheading h3{
+        font-size:16px;
+    }
+
+    .contactinfoheading h1{
+        font-size:28px;
+    }
+
+    .contact{
+        padding:30px 20px;
+    }
+
+    .contact i{
+        font-size:32px;
+    }
+
+    .contact h2{
+        font-size:22px;
+    }
+
+    .contact p{
+        font-size:14px;
+    }
+
+}
+
+/* ----------------------------------------------------map start------------ */
+
+.contactmapsection{
+    width:100%;
+    padding:100px 0px;
+    background:#111827;
+}
+
+.contactmapcontainer{
+    width:90%;
+    margin:auto;
+    display:flex;
+    gap:40px;
+}
+
+.contactform{
+    width:50%;
+    background:#0f172a;
+    padding:40px;
+    border-radius:15px;
+}
+.contactform h2{
+    color:#fff;
+    margin-bottom:30px;
+}
+
+.contactform input, textarea{
+    width:100%;
+    padding:15px;
+    margin-bottom: 18px;
+    outline:none;
+    border: 0.05px solid #f4d7a5;
+    border-radius:8px;
+    background:#1e293b;
+    color:#fff;
+    transition:0.3s;
+}
+
+.contactform textarea{
+    height:150px;
+}
+
+.contactform button{
+    display: block;
+    padding:15px;
+    border:none;
+    border-radius:8px;
+    background:#f59e0b;
+    color:#fff;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.contactform button:hover{
+    background:#fff;
+    color:#0f172a;
+}
+
+.contactmap{
+    width:50%;
+}
+
+.contactmap iframe{
+    width:100%;
+    height:100%;
+    border:none;
+    border-radius:15px;
+}
+
+/* -------------------- TABLET -------------------- */
+@media(max-width:992px){
+
+    .contactmapcontainer{
+        gap:25px;
+    }
+
+    .contactform{
+        padding:30px;
+    }
+
+}
+
+/* -------------------- MOBILE -------------------- */
+@media(max-width:768px){
+
+    .contactmapsection{
+        padding:80px 0;
+    }
+
+    .contactmapcontainer{
+        flex-direction:column;
+    }
+
+    .contactform,
+    .contactmap{
+        width:100%;
+    }
+
+    .contactmap iframe{
+        height:350px;
+    }
+
+}
+
+/* -------------------- SMALL MOBILE -------------------- */
+@media(max-width:480px){
+
+    .contactmapsection{
+        padding:60px 0px;
+    }
+
+    .contactform{
+        padding:25px 20px;
+    }
+
+    .contactform h2{
+        font-size:24px;
+    }
+
+    .contactform input,
+    .contactform textarea{
+        padding:13px;
+        font-size:14px;
+    }
+
+    .contactform button{
+        width:100%;
+    }
+
+    .contactmap iframe{
+        height:280px;
+    }
+
+}
+/* ------------------------------------------------address starts here------------------ */
+
+
+.officehourssection{
+    width:100%;
+    padding:100px 0px;
+    background:#0f172a;
+}
+.officecontainer{
+    width:90%;
+    margin:auto;
+    display:flex;
+    gap:30px;
+}
+
+.officeleft,.officeright{
+    width:50%;
+    padding:50px;
+    border-radius:15px;
+    color:#fff;
+    background:linear-gradient(135deg,#00e5ff,#0061fe00,#fb0303);
+    background-size:300% 300%;
+    animation:gradientMove 3s infinite;
+    transition:0.4s;
+    border:1px solid rgba(255,255,255,0.08);
+}
+@keyframes gradientMove{
+    0%{
+        background-position:50%;
+    }
+    50%{
+        background-position:100%;
+    }
+    100%{
+        background-position:50%;
+    }
+}
+.officeleft h3{
+    color:#f59e0b;
+    margin-bottom:10px;
+}
+
+.officeleft h1{
+    font-size:40px;
+    margin-bottom:30px;
+}
+
+.officeleft p{
+    margin-bottom:15px;
+    color:#ccc;
+}
+
+.officeright h3{
+    color:#f59e0b;
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.officeicons{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+}
+
+.officeicons a{
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    background:#111827;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-decoration:none;
+    transition:0.4s;
+}
+.officeicons a i{
+    color:#f59e0b;
+    font-size:24px;
+    transition:0.4s;
+}
+
+.officeleft:hover, .officeright:hover{
+    box-shadow:0 0 15px rgba(245,158,11,0.4);
+}
+
+.officeicons a:hover{
+    transform:translateY(-15px);
+    transform: rotate(360deg);
+}
+
+
+
+/* -------------------- TAB -------------------- */
+@media(max-width:992px){
+
+    .officeleft,
+    .officeright{
+        padding:40px 30px;
+    }
+
+    .officeleft h1{
+        font-size:34px;
+    }
+
+}
+
+/* -------------------- MOBILE -------------------- */
+@media(max-width:768px){
+
+    .officehourssection{
+        padding:80px 0;
+    }
+
+    /* .officecontainer{
+        flex-direction:column;   
+    } */
+
+    .officeleft,
+    .officeright{
+        width:100%;
+    }
+
+    .officeleft h1{
+        font-size:30px;
+    }
+
+}
+
+/* -------------------- SMALL MOBILE -------------------- */
+@media(max-width:480px){
+
+    .officehourssection{
+        padding:60px 0;
+    }
+
+    .officeleft,
+    .officeright{
+        padding:30px 20px;
+    }
+
+    .officeleft h3,
+    .officeright h3{
+        font-size:16px;
+    }
+
+    .officeleft h1{
+        font-size:26px;
+    }
+
+    .officeicons{
+        flex-wrap:wrap;
+    }
+
+    .officeicons a{
+        width:50px;
+        height:50px;
+    }
+
+    .officeicons a i{
+        font-size:20px;
+    }
+
+}
+/* -----------------------------------------------client reviews-------------------- */
+
+.reviewsection{
+    width:100%;
+    padding:100px 0px;
+    background:#111827;
+}
+.reviewheading{
+    text-align:center;
+    color:#fff;
+    margin-bottom:60px;
+}
+.reviewheading h3{
+    color:#f59e0b;
+    margin-bottom:10px;
+}
+
+.reviewheading h1{
+    font-size:45px;
+}
+.reviewcard{
+    display: inline-block;
+    width:350px;
+    background:#0f172a;
+    padding:30px;
+    border-radius:15px;
+    color:#fff;
+    margin-right:50px;
+    border:2px solid rgba(245,158,11,0.3);
+    box-shadow:0 0 30px rgba(245,158,11,0.3);
+    transition:0.4s;
+}
+.reviewcard h2{
+    margin-bottom:15px;
+}
+.reviewcard p{
+    color:#ccc;
+    line-height:1.7;
+    margin-bottom:20px;
+}
+.stars i{
+    color:#f59e0b;
+    margin-right:5px;
+}
+
+/* --------------------------------------------------------footer starts here------------------ */
+
+.footer{
+    background:url("https://png.pngtree.com/background/20230401/original/pngtree-dark-clouds-night-sea-waves-sea-water-advertising-background-picture-image_2249621.jpg");
+    position:relative;
+    color:#fff;
+    background-size:150%;
+    background-repeat:no-repeat;
+    animation:footerMove 8s linear infinite alternate;
+}
+@keyframes footerMove{
+
+   from{
+   background-position:left;
+}
+
+to{
+   background-position:right;
+}
+
+}
+.overlayy{
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.65);
+    position:absolute;
+    top:0;
+    left:0;
+}
+
+.footer-content{
+    position: relative;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:40px;
+    padding:80px 120px;
+}
+
+.footer h2,
+.footer h3{
+    color:#FF7A00;
+    margin-bottom:20px;
+}
+
+.footer p,
+.footer a{
+    color:#ddd;
+    display:block;
+    margin-bottom:10px;
+    text-decoration:none;
+}
+
+.footer a:hover{
+    color:#FF7A00;
+}
+.footer1 p{
+    max-width: 200px;
+}
+
+.bottom{
+    text-align:center;
+    padding:20px;
+    border-top:1px solid rgba(255,255,255,0.2);
+    background:rgba(11,31,58,0.85);
+}
+
+@media(max-width:992px){
+.footer-content{
+    grid-template-columns:repeat(2,1fr);
+    gap:35px;
+    padding:70px 50px;
+}
+.footer h2,.footer h3{
+    margin-bottom:15px;
+}
+}
+
+/* -----------------------------------------mobile-------------- */
+
+@media(max-width:768px){
+.footer-content{
+    grid-template-columns:1fr;
+    padding:60px 20px;
+    text-align:center;
+    gap:40px;
+}
+.footer1 p{
+    max-width:100%;
+}
+.footer p,.footer a{
+    font-size:15px;
+}
+.bottom{
+    font-size:14px;
+    padding:18px;
+}
+}
+/* -------------------------------small----------------- */
+
+@media(max-width:480px){
+.footer-content{
+    padding:50px 15px;
+    gap:30px;
+}
+.footer h2{
+    font-size:28px;
+}
+.footer h3{
+    font-size:22px;
+}
+.footer p,.footer a{
+    font-size:14px;
+    line-height:1.6;
+}
+.bottom{
+    font-size:13px;
+    padding:15px;
+}
+}
