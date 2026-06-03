@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .stocks-container{
+            top: 200px;
+    position:relative;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:40px;
+    z-index:2;
+}
+
+
+
+.stock-box{
+    width:250px;
+    height:250px;
+    border-radius:30px;
+    position:relative;
+    overflow:hidden;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    cursor:pointer;
+    transition:0.5s;
+    backdrop-filter:blur(10px);
+}
+
+.stock1{
+    background:linear-gradient(135deg,#00c6ff,#0072ff);
+    animation:topMove 2s ease;
+}
+
+
+.stock2{
+    background:linear-gradient(135deg,pink,#0072ff);
+    animation:topMove 2s ease;
+}
+
+
+.stock-box h2{
+    color:#fff;
+    font-size:2rem;
+    margin-bottom:10px;
+    z-index:2;
+}
+
+.stock-box p{
+    color:#fff;
+    font-size:1.3rem;
+    z-index:2;
+}
+
+
+.glass-pieces span{
+    position:absolute;
+    width:60px;
+    height:60px;
+    background:rgba(255,255,255,0.2);
+    opacity:0;
+    border-radius:10px;
+}
+
+.glass-pieces span:nth-child(1){
+    background-image: url('https://images.pexels.com/photos/3361739/pexels-photo-3361739.jpeg?cs=srgb&dl=pexels-goochie-poochie-grooming-3361739.jpg&fm=jpg');
+    object-fit: cover;
+    background-position: center;
+    background-size: cover;
+    top:10%;
+    left:20%;
+}
+
+.glass-pieces span:nth-child(2){
+    background-color: rgb(246, 255, 0);
+    top:30%;
+    left:70%;
+}
+
+.glass-pieces span:nth-child(3){
+    background-color: rgb(0, 255, 8);
+    top:60%;
+    left:40%;
+}
+
+.glass-pieces span:nth-child(4){
+    background-color: rgb(0, 255, 179);
+    top:70%;
+    left:80%;
+}
+
+.glass-pieces span:nth-child(5){
+    background-color: rgb(255, 0, 251);
+    top:40%;
+    left:10%;
+}
+
+.glass-pieces span:nth-child(6){
+    background-color: rgb(182, 28, 28);
+    top:20%;
+    left:50%;
+}
+
+
+.stock-box:hover{
+    transform:scale(1.1);
+    filter:brightness(0.8);
+}
+
+.stock-box:hover .glass-pieces span{
+    opacity:1;
+}
+
+
+.stock1:hover .glass-pieces span{
+    animation:blast1 1s linear infinite;
+}
+@keyframes blast1{
+    from{
+        transform: translateY(200px);
+    }
+    to{
+        transform: translateY(-200px);
+    }
+}
+
+.stock2:hover .glass-pieces span{
+    animation:blast2 1s linear infinite;
+}
+@keyframes blast2{
+    from{
+        transform: translateX(200px);
+    }
+    to{
+        transform: translateX(-200px);
+    }
+}
+    </style>
+</head>
+<body>
+    <div class="stocks-container">
+        <div class="stock-box stock1">
+            <h2>BOX1</h2>
+            <p>₹ 0000</p>
+            <div class="glass-pieces">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+
+        <div class="stock-box stock2">
+            <h2>BOX2</h2>
+            <p>₹ 0000</p>
+            <div class="glass-pieces">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+</body>
+</html>

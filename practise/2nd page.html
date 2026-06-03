@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    height:100vh;
+    background:#081120;
+    text-align: center;
+    color: aliceblue;
+}
+h1{
+    margin-top: 200px;
+    font-size: 50px;
+}
+p{
+    margin-top: 70px;
+    font-size: 30px;
+    margin-bottom: 50px;
+}
+label{
+    margin-top: 60px;
+    color: aqua;
+    font-size: 25px;
+}
+#guessfield{
+    height: 30px;
+    margin-top: 30px;
+    background:linear-gradient(to right, pink, orange);
+    color: black;
+}
+#submitbutton{
+    margin-top: 30px;
+    display: inline;
+    text-decoration: none;
+    background-color: #00f5d4;
+    color: black;
+    border-radius: 5px;
+    padding:10px;
+}
+
+
+
+@media(max-width:992px){
+
+    h1{
+        margin-top:180px;
+        font-size:42px;
+    }
+
+    p{
+        font-size:26px;
+        margin-top:50px;
+    }
+
+    label{
+        font-size:22px;
+    }
+
+    #guessfield{
+        width:250px;
+    }
+}
+
+
+
+@media(max-width:600px){
+
+    body{
+        padding:20px;
+    }
+
+    h1{
+        margin-top:140px;
+        font-size:34px;
+        line-height:1.4;
+    }
+
+    p{
+        font-size:20px;
+        margin-top:40px;
+        margin-bottom:40px;
+        line-height:1.6;
+    }
+
+    label{
+        font-size:20px;
+    }
+
+    #guessfield{
+        width:100%;
+        max-width:280px;
+        height:45px;
+        padding:10px;
+        font-size:16px;
+        border:none;
+        border-radius:8px;
+    }
+
+    #submitbutton{
+        width:100%;
+        max-width:280px;
+        padding:14px;
+        font-size:16px;
+        border:none;
+        cursor:pointer;
+    }
+}
+
+
+
+@media(max-width:400px){
+
+    h1{
+        margin-top:120px;
+        font-size:28px;
+    }
+
+    p{
+        font-size:17px;
+    }
+
+    label{
+        font-size:17px;
+    }
+
+    #guessfield{
+        max-width:240px;
+        height:42px;
+    }
+
+    #submitbutton{
+        max-width:240px;
+        font-size:15px;
+        padding:12px;
+    }
+}
+    </style>
+</head>
+<body>
+  
+    <h1> Number Guessing Game</h1>
+    <p>Pick a number between 1 - 10</p>
+    <label>Enter a guessed number</label><br>
+
+    <input id="guessfield"><br>
+    <input type="submit" id="submitbutton">
+    <script>
+        const answer = Math.floor(Math.random() *10+1);
+        console.log(answer);
+        document.getElementById("submitbutton").onclick = function(){
+            let guess= document.getElementById("guessfield").value
+            if(guess == answer){
+                 alert('${answer} is the number')
+                }
+                else if(guess< answer){
+                    alert("too small");
+                }
+                else{
+                    alert("too large");
+                }
+            }
+    </script>
+</body>
+</html>

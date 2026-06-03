@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Center Loop Animation</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    height:100vh;
+    background:#081120;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:40px;
+    overflow:hidden;
+    position:relative;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.bgline{
+    position:absolute;
+    width:1200px;
+    height:8px;
+    background:linear-gradient(90deg,transparent,#ff4d6d, #00f5d4,transparent);
+    top:-150px;
+    right:-1300px;
+    animation:lineMove 7s linear infinite;
+}
+
+@keyframes lineMove{
+    0%{
+        top:-150px;
+        right:-1300px;
+        transform:rotate(-25deg)rotate(0deg);
+    }
+    35%{
+        top:40%;
+        right:10%;
+        transform:rotate(-25deg)rotate(0deg);
+    }
+
+    50%{
+        top:40%;
+        right:10%;
+        transform:rotate(-25deg)rotate(360deg);
+    }
+
+    65%{
+        top:40%;
+        right:10%;
+        transform:rotate(-25deg)rotate(720deg);
+    }
+
+    100%{
+        top:80%;
+        right:120%;
+        transform:rotate(-25deg) rotate(720deg);
+    }
+}
+
+
+.card{
+    width:320px;
+
+    padding:30px;
+
+    background:rgba(255,255,255,0.08);
+
+    border:1px solid rgba(255,255,255,0.1);
+
+    backdrop-filter:blur(10px);
+
+    border-radius:20px;
+
+    position:relative;
+    z-index:2;
+
+    color:white;
+}
+
+.card h2{
+    margin-bottom:15px;
+}
+
+.card p{
+    line-height:1.7;
+    color:#d4dbea;
+}
+
+</style>
+</head>
+<body>
+
+    <span class="bgline"></span>
+
+    <div class="card">
+        <h2>First Card</h2>
+
+        <p>
+            Line enters from top right, rotates
+            twice at center and exits left.
+        </p>
+    </div>
+
+    <div class="card">
+        <h2>Second Card</h2>
+
+        <p>
+            Smooth futuristic looping animation
+            using CSS keyframes.
+        </p>
+    </div>
+
+</body>
+</html>
