@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>USER</title>
+        <style>
+        #userprint{
+            display: inline-block;
+            background-color:black;
+            font-size: 50px;
+        }
+    </style>
+</head>
+<body>
+    
+       <h1>Hello User !...</h1>
+       <P>Please enter your LOGIN credentials.</P>
+       <label>UserName</label><br>
+       <input id="user"><br><br>
+       <label>Password</label><br>
+       <input id="pass"><br><br>
+       <button id="login">LOGIN</button>
+       <button id="resetss">Reset</button><br><br>
+       <p id="userprint"></p>
+
+       <script>
+        document.getElementById("login").onclick = function(){
+
+            const correctuser = "Dheeraj";
+            const correctpass = 123;
+            
+            let userName = document.getElementById("user").value;
+            let Password = Number (document.getElementById("pass").value);
+
+            if(correctuser === userName && correctpass === Password){
+                document.getElementById("userprint").innerHTML = "Login Succesfull";
+                document.getElementById("userprint").style.color = "Green"; 
+            }
+            else if(correctuser === userName && correctpass != Password){
+                document.getElementById("userprint").innerHTML = "LOGIN Failed" + "<br>" + "Username Correct" + "<br>" + "Password Incorrect";
+                document.getElementById("userprint").style.color = "Orange"; 
+            }
+            else if (correctuser != userName && correctpass === Password){
+                document.getElementById("userprint").innerHTML = "LOGIN Failed" + "<br>" + "Username Incorrect" + "<br>" + "Password correct";
+                document.getElementById("userprint").style.color = "Blue"; 
+            }
+            else{
+                document.getElementById("userprint").innerHTML = "LOGIN Failed";
+                document.getElementById("userprint").style.color = "red"; 
+            }
+        }
+         document.getElementById("resetss").onclick = function(){
+            document.getElementById("user").value = "";
+            document.getElementById("pass").value = "";
+            document.getElementById("userprint").innerHTML = "";
+        }
+       </script>
+</body>
+</html>

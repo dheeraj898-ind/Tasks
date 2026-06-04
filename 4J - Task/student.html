@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AGE</title>
+    <style>
+        #print{
+            display: inline-block;
+            background-color: #f5f5f5;
+            font-size: 50px;
+        }
+        #print1{
+            font-size:30px;
+            margin-top:10px;
+            color: purple;
+        }
+        #userprint{
+            display: inline-block;
+            background-color: #f5f5f5;
+            font-size: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to party!</h1>
+    <p>Please check you Eligible or Not. ThankYou... </p>
+    <label>Enter Your NAME</label><br>
+    <input id="name"><br><br>
+    <label>Enter Your AGE</label><br>
+    <input id="age"><br><br>
+    <label>Enter Your MARKS</label><br>
+    <input id="marks"><br><br>
+    <button id="click">Click Here</button>
+    <button id="resets">Reset</button><br><br>
+    <p id="print"></p>
+    <p id="print1"></p>
+
+
+
+    <script>
+        document.getElementById("click").onclick = function(){
+            let names = document.getElementById("name").value;
+            let ages = Number(document.getElementById("age").value);
+            let markss = Number(document.getElementById("marks").value);
+            const Eligible = ages >=18 && markss >= 60;
+            if(Eligible){
+                document.getElementById("print").innerHTML  = names + " " + "You are  'ELIGIBLE'.";
+                document.getElementById("print").style.color = "green";
+                if(markss >= 90){
+                    document.getElementById("print1").innerHTML  = "You Secured Grade = 'A'";
+                }
+                else if(markss >= 60){
+                    document.getElementById("print1").innerHTML  = "You Secured Grade = 'B'";
+                    document.getElementById("print").style.color = "orange";
+                }
+            }
+            else{
+                document.getElementById("print").innerHTML = names + " You are NOT ELIGIBLE.";
+                document.getElementById("print1").innerHTML  = "You Secured Grade = 'C'";
+                document.getElementById("print").style.color = "red";
+            }
+            }
+            document.getElementById("resets").onclick = function(){
+                document.getElementById("name").value = "";
+                document.getElementById("age").value = "";
+                document.getElementById("marks").value = "";
+                document.getElementById("print").innerHTML = "";
+                document.getElementById("print1").innerHTML = "";
+            }
+        
+    </script>
+
+
+<hr>
+
+       <h1>Welcome to Enjoyment world !</h1>
+       <p>PLease purchase your tickets here...</p>
+       <label>Enter your NAME</label><br>
+       <input id="fname"><br><br>
+       <label>Enter your AGE</label><br>
+       <input id="fage"><br><br>
+       <button id="CLICKS">Click Here...</button>
+       <button id="reset">Reset</button>
+       <p id="ticket"></p>
+
+
+       <script>
+        document.getElementById("CLICKS").onclick = function(){
+            let namess = document.getElementById("fname").value;
+            let agess = Number(document.getElementById("fage").value);
+            
+            if(agess<5){
+                document.getElementById("ticket").innerHTML = "Welcome " + namess + "..." + "<br>" + "Kids Ticket = 'FREE Entry'" + "<br>" + "Enjoy the Movie."
+                document.getElementById("ticket").style.color = "green";
+            }
+        
+            else if(agess >=5 && agess <=18){
+                document.getElementById("ticket").innerHTML = "Welcome " + namess + "..." + "<br>" + "Child's Ticket = ₹200" + "<br>" + "Enjoy the Movie."
+                document.getElementById("ticket").style.color = "Blue";
+            }
+            else if(agess >=18 && agess <=60){
+                document.getElementById("ticket").innerHTML = "Welcome " + namess + "..." + "<br>" + "Adult's Ticket = ₹1000" + "<br>" + "Enjoy the Movie."
+                document.getElementById("ticket").style.color = "Orange";
+            }
+            else{
+                document.getElementById("ticket").innerHTML = "Welcome " + namess + "..." + "<br>" + "Senior Citizen's = ₹2000" + "<br>" + "Enjoy the Movie."
+                document.getElementById("ticket").style.color = "Purple";
+            }
+
+        }
+        
+        document.getElementById("reset").onclick = function(){
+            document.getElementById("fname").value = "";
+            document.getElementById("fage").value = "";
+            document.getElementById("ticket").innerHTML = "";
+        }
+       </script>
+
+       <hr>
+
+
+       
+</body>
+</html>
