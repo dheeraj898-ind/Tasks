@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!-- Using AND operator -->
+
+    <script>
+        let id1 = "no";
+        let ticket1 = "yes";
+        let age1 = 20;
+        if (id1 === "yes" && ticket1 === "yes" && age1 >= 18){
+            console.log("You can Enter.");
+        }
+        else{
+            console.log("No Entry.");
+        }
+    </script>
+
+
+
+    <!-- Using OR operator -->
+
+    <script>
+        let id = "yes";
+        let ticket = "yes";
+        let age = 11;
+        if (id === "yes" || ticket === "yes" || age >= 18){
+            console.log("You can Enter.");
+        } 
+        else{
+            console.log("No Entry.");
+        }
+    </script>
+
+
+
+    <!-- Using BOTH AND , OR operators -->
+
+    <script>
+        let id2 = "yes";
+        let ticket2 = "yes";
+        let age2 = 35;
+        
+        if (id2 === "yess" && ticket2 === "yess" || age2 >= 18){
+            console.log("You can Enter.");
+        }
+        else{
+            console.log("No Entry.");
+        }
+    </script>
+
+
+<hr>
+
+<!-- ------------------------------------------------------------------------------------------------------------------ -->
+
+
+      <!-- Using AND operator -->
+
+      <script>
+
+        let weekend = "yes";
+        let holiday = "yes";
+        let leaveApproved = "yes";
+        
+        if (weekend === "yes" && holiday === "yes" && leaveApproved === "yes"){
+            console.log("Yes, Its holiday You can Enjoy.");
+        }
+        else{
+            console.log("No Holiday.");
+        }
+      </script>
+
+
+
+      <!-- Using OR operator -->
+
+      <script>
+        let weekend1 = "no";
+        let holiday1 = "yes";
+        let leaveApproved1 = "no";
+        
+        if (weekend1 === "yes" || holiday1 === "yes" || leaveApproved1 === "yes"){
+            console.log("Yes, Its holiday You can Enjoy.");
+        }
+        else{
+            console.log("No Holiday.");
+        }
+      </script>
+
+      <!-- Using BOTH AND , OR operators -->
+
+      <script>
+        
+        let weekend2 = "yes";
+        let holiday2 = "no";
+        let leaveApproved2 = "yes";
+        
+        if (weekend2 === "yes" && holiday2 === "yes" || leaveApproved2 === "no")
+        {
+            console.log("Yes, Its holiday You can Enjoy.");
+        }
+        else{
+            console.log("No Holiday.");
+        }
+      </script>
+
+      <hr>
+
+      <!-- ------------------------------------------------------------------------------------------- -->
+
+
+
+
+
+      <!-- Using SWITCH -->
+
+      <script>
+        let month = "January";
+        
+        switch (month){
+            
+            case "January":
+            case "February":
+            case "March":
+                console.log("Summer Season");
+                break;
+                
+            case "April":
+            case "May":
+            case "June":
+            case "July":
+                console.log("Rainy Season");
+                break;
+                
+            case "August":
+            case "September":
+            case "October":
+            case "November":
+            case "December":
+                console.log("Winter Season");
+                break;
+                
+            default:
+                console.log("Invalid Month");
+        }
+      </script>
+
+
+
+      <!-- ------------------------------------------------------------------------------------ -->
+
+      <!-- Using SWITCH Statements. -->
+
+      
+      <script>
+        
+        let mNumber = 6;
+        
+        switch (mNumber){
+            case 1:
+                console.log("January");
+                break;
+            
+            case 2:
+                console.log("February");
+                break;
+                
+            case 3:
+                console.log("March");
+                break;
+                    
+            case 4:
+                console.log("April");
+                break;
+                
+            case 5:
+                console.log("May");
+                break;
+                
+            case 6:
+                console.log("June");
+                break;
+                
+            case 7:
+                console.log("July");
+                break;
+                
+            case 8:
+                console.log("August");
+                break;
+                
+            case 9:
+                console.log("September");
+                break;
+                
+            case 10:
+                console.log("October");
+                break;
+                
+            case 11:
+                console.log("November");
+                break;
+                
+            case 12:
+                console.log("December");
+                break;
+                
+            default:
+                console.log("Invalid Month Number");
+            }
+      </script>
+</body>
+</html>

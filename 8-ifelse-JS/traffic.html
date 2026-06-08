@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+
+        let signal = "Green";
+        
+        if (signal === "Red"){
+            console.log("plaese Stop Immediately");
+        } 
+        else if (signal === "Yellow"){
+            console.log("Slow down and prepare to stop");
+        } 
+        else if (signal === "Green"){
+            console.log("please Go Safely");
+        } 
+        else{
+        console.log("Invalid Signal");
+    }
+    </script>
+    
+    <script>
+
+
+        let signall = "Yellow";
+        
+        switch (signall){
+            case "Red":
+                console.log("Stop Immediately");
+                break;
+            case "Yellow":
+                console.log("Slow down and prepare to stop");
+                break;
+            case "Green":
+                console.log("Go Safely");
+                break;
+            default:
+                console.log("Invalid Signal");
+            }
+    </script>
+
+
+
+     <h2> Please enter signal.</h2>
+     <input id="sig">
+     <button id="click">Click</button>
+     <p id="demo"></p>
+
+     <script>
+        document.getElementById("click").onclick =function(){
+            let signa = document.getElementById("sig").value;
+
+            if(signa === "red"){
+                document.getElementById("demo").innerHTML = "Stop Immediateley";
+            }
+            else if(signa === "yellow"){
+                 document.getElementById("demo").innerHTML = "Get down slow";
+            }
+            else if(signa === "green"){
+                 document.getElementById("demo").innerHTML = "start Immediateley";
+            }
+            else{
+                 document.getElementById("demo").innerHTML = "Invalid";
+            }
+        }
+     </script>
+
+
+
+</body>
+</html>
