@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartWare</title>
+</head>
+<body>
+    
+
+    <script>
+
+        const products = [
+            {name: "  wireless mouse ",
+            category: "electronics",
+            quantity: 25,
+            price: 799
+        },
+       
+        {
+        name: "Gaming Keyboard",
+        category: "ELECTRONICS",
+        quantity: 8,
+        price: 2499
+        },
+
+        {
+        name: "office chair",
+        category: "furniture",
+        quantity: 3,
+        price: 5999
+        },
+        
+        {
+        name: "LED Monitor",
+        category: "Electronics",
+        quantity: 15,
+        price: 10999
+        },
+
+        {
+        name: "water bottle",
+        category: "home",
+        quantity: 50,
+        price: 299
+        }
+    ];
+    
+
+    
+
+
+for(let i = 0; i < products.length; i++){
+
+    products[i].name = products[i].name.trim();
+
+    let words = products[i].name.split(" ");
+
+    let firstWord = words[0].charAt(0).toUpperCase() + words[0].slice(1).toLowerCase();
+
+    let secondWord = words[1].charAt(0).toUpperCase() + words[1].slice(1).toLowerCase();
+
+    products[i].name = firstWord + " " + secondWord;
+
+    products[i].category = products[i].category.toUpperCase();
+
+    // Inventory Value
+    products[i].inventoryValue =
+    products[i].quantity * products[i].price;
+
+
+    if(products[i].quantity > 20){
+        products[i].stockStatus = "HIGH STOCK";
+    }
+    else if(products[i].quantity >= 10){
+        products[i].stockStatus = "MEDIUM STOCK";
+    }
+    else if(products[i].quantity > 0){
+        products[i].stockStatus = "LOW STOCK";
+    }
+    else{
+        products[i].stockStatus = "OUT OF STOCK";
+    }
+
+    console.log(products[i]);
+    
+}
+
+    let totalProducts = products.length;
+    console.log("Total Products :", totalProducts);
+
+    let totalInventoryValue = 0;
+    
+    for(let i = 0; i < products.length; i++){
+        
+        totalInventoryValue = totalInventoryValue + products[i].inventoryValue;    
+    }
+    console.log("Total Inventory Value :", totalInventoryValue );
+    
+    let totalPrice = 0;
+    
+    for(let i = 0; i < products.length; i++){
+        totalPrice = totalPrice + products[i].price;
+    }
+    
+    let averagePrice = totalPrice / products.length;
+    console.log("Average Price :", averagePrice);
+
+
+// --------------------------------------------------------------------------------------------
+
+
+
+    let mostExpensive = products[0];
+    
+    for(let i = 0; i < products.length; i++){
+        if(products[i].price > mostExpensive.price){
+            mostExpensive = products[i];
+        }
+    }
+    
+    console.log("Most Expensive Product :", mostExpensive.name);
+    console.log("Price :", mostExpensive.price);
+    
+    let cheapestProduct = products[0];
+    for(let i = 0; i < products.length; i++){
+        if(products[i].price < cheapestProduct.price){
+            cheapestProduct = products[i];
+        }
+    }
+   
+    console.log("Cheapest Product :", cheapestProduct.name);
+    console.log("Price :", cheapestProduct.price);
+
+
+    let highestQuantity = products[0];
+    for(let i = 0; i < products.length; i++){
+        if(products[i].quantity > highestQuantity.quantity){
+            highestQuantity = products[i];
+        }
+    }
+    console.log("Highest Quantity Product :", highestQuantity.name);
+    console.log("Quantity :", highestQuantity.quantity);
+    
+    
+    let lowestQuantity = products[0];
+    for(let i = 0; i < products.length; i++){
+        if(products[i].quantity < lowestQuantity.quantity){
+            lowestQuantity = products[i];
+        }
+    }
+    console.log("Lowest Quantity Product :", lowestQuantity.name);
+    console.log("Quantity :", lowestQuantity.quantity);
+
+
+
+    // ------------------------------------------------------------------------------
+
+
+
+   
+
+const keyword = prompt("Enter something here...");
+
+for(let i = 0; i < products.length; i++)
+{
+    if(
+    products[i].category
+    .toLowerCase()
+    .includes(keyword.toLowerCase())
+    )
+    {
+        console.log(products[i]);
+    }else{
+        console.log("Nothing there...")
+    }
+}
+
+
+// -----------------------------------------------------Top 3 Products-----------------
+
+
+let first = products[0];
+
+for(let i = 0; i < products.length; i++)
+{
+    if(products[i].price > first.price)
+    {
+        first = products[i];
+    }
+}
+
+let second = products[0];
+
+for(let i = 0; i < products.length; i++)
+{
+    if(
+        products[i].price > second.price &&
+        products[i].name != first.name
+    )
+    {
+        second = products[i];
+    }
+}
+
+
+let third = products[0];
+
+for(let i = 0; i < products.length; i++)
+{
+    if(
+        products[i].price > third.price &&
+        products[i].name != first.name &&
+        products[i].name != second.name
+    )
+    {
+        third = products[i];
+    }
+}
+
+
+console.log("===== TOP 3 COSTLIEST PRODUCTS =====");
+
+console.log(first.name, "-", first.price);
+
+console.log(second.name, "-", second.price);
+
+console.log(third.name, "-", third.price);
+    </script>
+</body>
+</html>
