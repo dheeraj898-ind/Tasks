@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#f3f3f3;
+}
+.navbar{
+    background:#18253f;
+    color:white;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 40px;
+}
+
+.logo{
+    font-size:32px;
+    font-weight:bold;
+}
+
+.search-box input{
+    width:500px;
+    padding:10px;
+    border:none;
+    border-radius:4px;
+}
+
+.menu{
+    display:flex;
+    gap:25px;
+    list-style:none;
+}
+
+
+.container{
+    width:80%;
+    margin:50px auto;
+    display:flex;
+    gap:40px;
+}
+
+.left-section{
+    flex:1;
+    overflow: hidden;
+}
+
+.image-box{
+    overflow:hidden;
+    border-radius:10px;
+}
+
+.main-image{
+    width:100%;
+    display:block;
+    animation:turn 1s ease-in-out infinite;
+}
+
+@keyframes turn{
+    0%{
+        transform:scale(1);
+    }
+
+    50%{
+        transform:scale(1.1);
+    }
+
+    100%{
+        transform:scale(1);
+    }
+}
+.main-image:hover{
+    cursor: pointer;
+    animation-play-state: paused;
+}
+
+.thumbnails{
+    display:flex;
+    gap:10px;
+    margin-top:15px;
+}
+
+.thumbnails img{
+    width:80px;
+    height:80px;
+    object-fit:cover;
+    border-radius:5px;
+    transition: 0.3s;
+}
+
+.right-section{
+    flex:1;
+    background:white;
+    padding:25px;
+    border-radius:10px;
+}
+
+.thumbnails img:hover{
+    transform: rotate(360deg);
+}
+.right-section h1{
+    font-size:50px;
+    margin-bottom:10px;
+}
+
+.price{
+    margin:20px 0;
+}
+
+.new-price{
+    font-size:35px;
+    font-weight:bold;
+}
+
+.old-price{
+    text-decoration:line-through;
+    color:gray;
+    margin-left:10px;
+}
+
+.discount{
+    margin-left:10px;
+}
+
+.rating{
+    margin:20px 0;
+}
+
+.quantity{
+    display:flex;
+    gap:10px;
+    margin:20px 0;
+    
+}
+
+.quantity button{
+    width:40px;
+    height:40px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.quantity button:hover{
+    transform: scale(1.1);
+    background-color: #18253f;
+    color: #f3f3f3;
+}
+
+.bag-btn{
+    width:100%;
+    padding:15px;
+    background:#18253f;
+    color:white;
+    border:none;
+    border-radius:5px;
+    font-size:18px;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+.bag-btn:hover{
+    transform: scale(0.8);
+    background-color: #f3f3f3;
+    color:#18253f ;
+}
+.offer-box{
+    margin-top:30px;
+    border:1px solid #ddd;
+    padding:25px;
+    text-align:center;
+    border-radius:10px;
+}
+
+.offer-box button{
+    margin-top:15px;
+    padding:10px 20px;
+    background:#18253f;
+    color:white;
+    border:none;
+}
+
+
+    </style>
+</head>
+<body>
+
+
+    <nav class="navbar">
+        <div class="logo">TIMELESS WATCHES</div>
+
+        <div class="search-box">
+            <input type="text" placeholder="Search....">
+        </div>
+
+        <ul class="menu">
+            <li>Shop</li>
+            <li>New Arrivals</li>
+            <li>Brands</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+    </nav>
+
+    <section class="container">
+
+        <div class="left-section">
+
+            <div class="image-box">
+                <img src="https://watchwisehub.com/wp-content/uploads/2025/04/mens-gold-watch-luxury.jpg" class="main-image">
+            </div>
+
+            <div class="thumbnails">
+                <img src="https://img.drz.lazcdn.com/static/pk/p/81716d0949c5b9b2596da82b67d08b6a.jpg_720x720q80.jpg">
+                <img src="https://img.drz.lazcdn.com/static/pk/p/66d6b5dc1e330cd2facda2b97b36ffd1.jpg_720x720q80.jpg">
+                <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/watch/5/w/l/1155-sports-formal-casual-watches-for-boys-men-zeku-men-original-imah8kjcmkfudrbs.jpeg?q=70">
+                <img src="https://m.media-amazon.com/images/I/71DSA+AvbVL._AC_.jpg">
+                <img src="https://5.imimg.com/data5/SELLER/Default/2024/6/423773467/YQ/AS/NG/91742685/analog-watches-for-men-1000x1000.jpg">
+                <img src="https://images-na.ssl-images-amazon.com/images/I/71xk7LGnBlL._AC_UL1500_.jpg">
+            </div>
+
+        </div>
+
+        <div class="right-section">
+
+            <h1>Elegant Luxury Watch</h1>
+
+            <h3>PRESTIGE TIME CO.</h3>
+
+            <div class="price">
+                <span class="new-price">$499.99</span>
+                <span class="old-price">$799.99</span>
+                <span class="discount">38% OFF</span>
+            </div>
+
+            <p>
+                This luxurious timepiece combines elegance with
+                precision craftsmanship.
+            </p>
+
+            <div class="rating">
+                 Rated 4.8/5 (256 reviews)
+            </div>
+
+            <div class="quantity">
+                <button>-</button>
+                <button>1</button>
+                <button>+</button>
+            </div>
+
+            <button class="bag-btn">
+                Add to Bag
+            </button>
+
+            <div class="offer-box">
+                <h2>Limited-Time Offer!</h2>
+                <p>
+                    Get an additional 10% off your first purchase.
+                </p>
+
+                <button>Sign Up Now</button>
+            </div>
+
+        </div>
+
+    </section>
+
+</body>
+</html>
