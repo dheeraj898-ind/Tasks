@@ -1,0 +1,29 @@
+body{
+    font-family: Arial;
+    padding: 20px;
+}
+
+.container{
+    display: flex;
+    gap: 50px;
+    background-color: #eead63;
+}
+
+.left{
+    width: 50%;
+}
+.right{
+    width: 50%;
+}
+.right{
+    background-color: white;
+}
+select,button{
+    padding: 10px;
+    margin: 5px;
+}
+
+.right{
+    border: 1px solid black;
+    padding: 20px;
+}
