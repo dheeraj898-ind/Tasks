@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Task 2</title>
+
+    <style>
+
+        body
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container
+        {
+            display: flex;
+            gap: 30px;
+        }
+
+        .card
+        {
+            width: 250px;
+            min-height: 250px;
+            border: 2px solid black;
+            padding: 20px;
+        }
+
+        input
+        {
+            width: 200px;
+            padding: 5px;
+        }
+
+        button
+        {
+            margin-top: 10px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="card">
+
+            <input
+                type="text"
+                id="inputText"
+                placeholder="Enter Text">
+
+            <br>
+
+            <button onclick="addItem()">
+                Add
+            </button>
+
+        </div>
+
+        <div class="card" id="displayCard">
+
+        </div>
+
+    </div>
+
+    <script>
+
+        let items = [];
+
+        function addItem()
+        {
+            let input =
+            document.getElementById("inputText");
+
+            items.push(input.value);
+
+            input.value = "";
+
+            displayItems();
+        }
+
+        function displayItems()
+        {
+            let display =
+            document.getElementById("displayCard");
+
+            display.innerHTML = "";
+
+            for(let i = 0; i < items.length; i++)
+            {
+                display.innerHTML +=
+                "<p>" +
+                items[i] +
+                " <button onclick='deleteItem(" + i + ")'>Delete</button>" +
+                "</p>";
+            }
+        }
+
+        function deleteItem(index)
+        {
+            items.splice(index, 1);
+
+            displayItems();
+        }
+
+    </script>
+
+</body>
+
+</html>
+
+
+
+<!-- Need to understand the code.-->
