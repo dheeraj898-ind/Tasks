@@ -9,7 +9,7 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background: #f2f2f2;
+            background: whitesmoke;
             font-family: Arial, sans-serif;
         }
 
@@ -95,12 +95,10 @@
 
     <div class="card">
 
-        <h2>Welcome Buddy </h2>
+        <h2>Welcome Buddy! </h2>
 
-        <!-- Answers show here -->
         <div id="chatbox"></div>
 
-        <!-- Question input at the bottom -->
         <div class="input-area">
             <input type="text" id="userInput" placeholder="Ask something..." />
             <button onclick="getReply()">Search</button>
@@ -115,41 +113,46 @@
         const API_URL = "https://openrouter.ai/api/v1/chat/completions";
 
         async function getReply() {
-
+            
             const question = document.getElementById("userInput").value.trim();
-            const chatbox  = document.getElementById("chatbox");
+            const chatbox = document.getElementById("chatbox");
 
-            // Show question
+            
             chatbox.innerHTML += "<p><b>DHEERAJ:</b> " + question + "</p>";
-
+            
             document.getElementById("userInput").value = "";
-
-            const response = await fetch(API_URL, {
-                method: "POST",
-                headers: {
-                    "Authorization": "Bearer " + API_KEY,
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify({
-                    model: "openai/gpt-3.5-turbo",
-                    messages: [{ role: "user", content: question }]
-                })
-            });
-
-            const data = await response.json();
-
-            // Show answer
-            chatbox.innerHTML += "<p><b>AI:</b> " + data.choices[0].message.content + "</p>";
-
-            // Scroll to latest answer
-            chatbox.scrollTop = chatbox.scrollHeight;
-
+            
+            try{
+                
+                const response = await fetch(API_URL, {
+                    method: "POST",
+                    headers: {
+                        "Authorization": "Bearer " + API_KEY,
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({
+                        model: "openai/gpt-3.5-turbo",
+                        messages: [ { role: "user", content: question }]
+                    })
+                });
+                
+                const data = await response.json();
+                
+                chatbox.innerHTML += "<p><b>AI:</b> " + data.choices[0].message.content + "</p>";
+            }
+            
+            catch(error){
+                
+                chatbox.innerHTML += "<p><b>AI:</b> Sorry! Something went wrong. Please try again.</p>";
+                console.log(error);
+            }  
+            
         }
-
-        function clearChat() {
+        
+        function clearChat(){
             document.getElementById("chatbox").innerHTML = "";
         }
-
+        
     </script>
 
 </body>
